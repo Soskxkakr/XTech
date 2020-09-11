@@ -67,9 +67,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="demo.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="demo.aspx.cs">
+      <DependentUpon>demo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="demo.aspx.designer.cs">
+      <DependentUpon>demo.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Layout.Master.cs">
       <DependentUpon>Layout.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
