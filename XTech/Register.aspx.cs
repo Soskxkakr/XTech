@@ -55,5 +55,10 @@ namespace XTech
                 Response.Write("Error: " + ex.ToString());
             }
         }
+
+        protected void txtUsername_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

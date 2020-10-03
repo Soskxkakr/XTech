@@ -85,6 +85,7 @@
     <Content Include="fonts\ElegantIcons.svg" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="ForgotPassword.aspx" />
+    <Content Include="Home.aspx" />
     <Content Include="img\banner\banner-1.jpg" />
     <Content Include="img\banner\banner-2.jpg" />
     <Content Include="img\blog\blog-1.jpg" />
@@ -183,6 +184,13 @@
     </Compile>
     <Compile Include="ForgotPassword.aspx.designer.cs">
       <DependentUpon>ForgotPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
     </Compile>
     <Compile Include="Layout.Master.cs">
       <DependentUpon>Layout.Master</DependentUpon>
