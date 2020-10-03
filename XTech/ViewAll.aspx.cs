@@ -13,7 +13,8 @@ namespace XTech
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["uType"] == null || !Session["uType"].Equals("Admin"))
+                Response.Redirect("Login.aspx");
         }
         public string fetchData()
         {

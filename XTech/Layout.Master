@@ -82,6 +82,18 @@
                                         <li><a href="./shoping-cart.html">Shoping Cart</a></li>
                                         <li><a href="./checkout.html">Check Out</a></li>
                                         <li><a href="./blog-details.html">Blog Details</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="AddProduct.aspx">Add Product</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="SearchProduct.aspx">Search Product</a></li>
+                                         <%
+                                          if (Session["uType"] == null)
+                                          {%>
+                                              <li class="nav-item"><a class="nav-link" href="Login.aspx">Login</a></li>
+                                         <%}
+                                          else if (Session["uType"].Equals("Admin") || Session["uType"].Equals("Customer"))
+                                          {%>
+                                          <li class="nav-item"><a class="nav-link" href="#" runat="server" onserverclick="Logout_Click">LogOut</a></li>
+                                          <%}
+                                         %>
                                     </ul>
                                 </li>
                                 <li><a href="./blog.html">Blog</a></li>

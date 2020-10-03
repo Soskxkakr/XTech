@@ -13,5 +13,10 @@ namespace XTech
         {
 
         }
+        protected void Logout_Click(Object sender, EventArgs e)
+        {
+            Session.Abandon();
+            Response.Redirect("Login.aspx");
+        }
     }
 }
