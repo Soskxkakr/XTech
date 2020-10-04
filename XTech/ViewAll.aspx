@@ -8,6 +8,7 @@
                 <td style="height: 42px">Email</td>
                 <td style="height: 42px">Gender</td>
                 <td style="height: 42px">Country</td>
+                <td style="height: 42px">User Type</td>
                 <td style="height: 42px">Edit</td>
             </tr>
             <%=fetchData() %>

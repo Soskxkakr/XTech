@@ -6,22 +6,22 @@
             <tr>
                 <td style="width: 359px">Username:</td>
                 <td>
-                    <asp:TextBox ID="txtUsername" runat="server" OnTextChanged="txtUsername_TextChanged"></asp:TextBox>
+                    <asp:TextBox ID="txtUsername" runat="server"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="*Required!" ControlToValidate="txtUsername" ForeColor="#CC3300"></asp:RequiredFieldValidator>
                 </td>
             </tr>
             <tr>
                 <td style="width: 359px; height: 38px">Password:</td>
                 <td style="height: 38px">
-                    <asp:TextBox ID="txtPassword" runat="server" TextMode="Password"></asp:TextBox>
-                    <asp:RangeValidator ID="RangeValidator1" runat="server" ControlToValidate="txtPassword" ErrorMessage="Password Must be between 8-16 characters!" ForeColor="#CC3300" MaximumValue="16" MinimumValue="8"></asp:RangeValidator>
+                    <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" MaxLength="16"></asp:TextBox>
+                    <asp:CustomValidator ID="CustomValidator1" runat="server" ControlToValidate="txtPassword" ErrorMessage="*Password must between 8 - 16 characters!" ForeColor="#CC3300" OnServerValidate="CustomValidator1_ServerValidate"></asp:CustomValidator>
                 </td>
             </tr>
                     <tr>
                 <td style="width: 359px; height: 38px">Retype Password:</td>
                 <td style="height: 38px">
                     <asp:TextBox ID="txtRpassword" runat="server" TextMode="Password"></asp:TextBox>
-                    <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="txtRpassword" ControlToValidate="txtPassword" EnableClientScript="False" ErrorMessage="Password Not Matching!" ForeColor="#CC3300"></asp:CompareValidator>
+                    <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="txtRpassword" ControlToValidate="txtPassword" EnableClientScript="False" ErrorMessage="*Password Not Matching!" ForeColor="#CC3300"></asp:CompareValidator>
                 </td>
             </tr>
             <tr>
@@ -29,7 +29,7 @@
                 <td>
                     <asp:TextBox ID="txtEmail" runat="server" TextMode="Email"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtEmail" ErrorMessage="*Required!" ForeColor="#CC3300"></asp:RequiredFieldValidator>
-                    <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtEmail" ErrorMessage="Incorrect Email!" ForeColor="#CC3300" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtEmail" ErrorMessage="*Incorrect Email!" ForeColor="#CC3300" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
                 </td>
             </tr>
             <tr>
@@ -51,6 +51,15 @@
                         <asp:ListItem>North America</asp:ListItem>
                         <asp:ListItem>Europe</asp:ListItem>
                         <asp:ListItem>South America</asp:ListItem>
+                    </asp:DropDownList>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 359px">User Type</td>
+                <td>
+                    <asp:DropDownList ID="ddlUserType" runat="server">
+                        <asp:ListItem>Admin</asp:ListItem>
+                        <asp:ListItem>Customer</asp:ListItem>
                     </asp:DropDownList>
                 </td>
             </tr>

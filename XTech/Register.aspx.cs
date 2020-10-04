@@ -30,7 +30,7 @@ namespace XTech
             try
             {
                 con.Open();
-                string query = "select count(*) from Users where email ='" + txtEmail.Text + "'";
+                string query = "SELECT count(*) FROM Users WHERE email ='" + txtEmail.Text + "'";
                 SqlCommand cmd = new SqlCommand(query, con);
                 int check = Convert.ToInt32(cmd.ExecuteScalar().ToString());
                 if (check > 0)
@@ -39,13 +39,14 @@ namespace XTech
                 }
                 else
                 {
-                    string query1 = "insert into Users (username, password, email, gender, country) values (@uname,@pword,@email,@gender, @country) ";
+                    string query1 = "INSERT INTO Users (username, password, email, gender, country, usertype) values (@uname,@pword,@email,@gender, @country, @usertype) ";
                     SqlCommand cmd1 = new SqlCommand(query1, con);
                     cmd1.Parameters.AddWithValue("@uname", txtUsername.Text);
                     cmd1.Parameters.AddWithValue("@pword", txtPassword.Text);
                     cmd1.Parameters.AddWithValue("@email", txtEmail.Text);
                     cmd1.Parameters.AddWithValue("@gender", rdbGender.SelectedItem.ToString());
                     cmd1.Parameters.AddWithValue("@country", ddlcountry.SelectedItem.ToString());
+                    cmd1.Parameters.AddWithValue("@usertype", ddlUserType.SelectedItem.ToString());
                     cmd1.ExecuteNonQuery();
                     Response.Write("<script type=\text/javascript\">alert('Thank You for being a Customer! ');</script>");
                 }
@@ -56,9 +57,9 @@ namespace XTech
             }
         }
 
-        protected void txtUsername_TextChanged(object sender, EventArgs e)
+        protected void CustomValidator1_ServerValidate(object source, ServerValidateEventArgs args)
         {
-
+            args.IsValid = (args.Value.Length < 8 || args.Value.Length > 16) ? false : true;
         }
     }
 }

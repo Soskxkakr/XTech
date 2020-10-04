@@ -56,9 +56,24 @@
                                         <li><a href="#">English</a></li>
                                     </ul>
                                 </div>
-                                <div class="header__top__right__auth">
-                                    <a href="Register.aspx"><i class="fa fa-user"></i> Login</a>
+                                <div class="header__top__right__language"> 
+                                    <%
+                                        if (Check_User().Equals("My Account"))
+                                        {%>
+                                            <i class="fa fa-user"></i><div class="ml-1"><a href="#" style="color:black">My Account</a></div>
+                                            <ul>
+                                                <li><a class="nav-link" href="#" runat="server" onserverclick="Logout_Click">Logout</a></li>
+                                            </ul>
+                                         <%}
+                                        else
+                                        {%>
+                                            <i class="fa fa-user"></i><div class="ml-1"><a href="Login.aspx" style="color:black">Login</a></div>
+                                        <%}
+                                    %>
                                 </div>
+                                <!-- <div class="header__top__right__auth row">
+                                    <a href="Register.aspx"><i class="fa fa-user"></i>Login</a>
+                                </div> -->
                             </div>
                         </div>
                     </div>
@@ -74,8 +89,8 @@
                     <div class="col-lg-6">
                         <nav class="header__menu">
                             <ul>
-                                <li class="active"><a href="./index.html">Home</a></li>
-                                <li><a href="./shop-grid.html">Shop</a></li>
+                                <li><a href="Home.aspx">Home</a></li>
+                                <li><a href="Shop.aspx">Shop</a></li>
                                 <li><a href="#">Pages</a>
                                     <ul class="header__menu__dropdown">
                                         <li><a href="./shop-details.html">Shop Details</a></li>
@@ -84,16 +99,6 @@
                                         <li><a href="./blog-details.html">Blog Details</a></li>
                                         <li class="nav-item"><a class="nav-link" href="AddProduct.aspx">Add Product</a></li>
                                         <li class="nav-item"><a class="nav-link" href="SearchProduct.aspx">Search Product</a></li>
-                                         <%
-                                          if (Session["uType"] == null)
-                                          {%>
-                                              <li class="nav-item"><a class="nav-link" href="Login.aspx">Login</a></li>
-                                         <%}
-                                          else if (Session["uType"].Equals("Admin") || Session["uType"].Equals("Customer"))
-                                          {%>
-                                          <li class="nav-item"><a class="nav-link" href="#" runat="server" onserverclick="Logout_Click">LogOut</a></li>
-                                          <%}
-                                         %>
                                     </ul>
                                 </li>
                                 <li><a href="./blog.html">Blog</a></li>

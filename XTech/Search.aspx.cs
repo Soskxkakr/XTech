@@ -24,7 +24,7 @@ namespace XTech
         protected void btnSearch_Click(object sender, EventArgs e)
         {
             con.Open();
-            string query = "select count(*) from Users where username='" + txtName.Text + "'";
+            string query = "SELECT count(*) FROM Users WHERE username='" + txtName.Text + "'";
             SqlCommand cmd = new SqlCommand(query, con);
             int check = Convert.ToInt32(cmd.ExecuteScalar().ToString());
             if (check <= 0)
@@ -34,21 +34,27 @@ namespace XTech
             else
             {
                 Panel1.Visible = true;
-                SqlDataAdapter da = new SqlDataAdapter("select * from Users where username='" + txtName.Text + "'", con);
+                SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM Users WHERE username='" + txtName.Text + "'", con);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 id = Convert.ToInt16(dt.Rows[0][0]);
                 txtUsername.Text = dt.Rows[0][1].ToString();
-                txtEmail.Text = dt.Rows[0][4].ToString();
-                rdbGender.Text = dt.Rows[0][5].ToString();
-                ddlcountry.Text = dt.Rows[0][6].ToString();
+                txtEmail.Text = dt.Rows[0][3].ToString();
+                rdbGender.Text = dt.Rows[0][4].ToString();
+                ddlcountry.Text = dt.Rows[0][5].ToString();
+                ddlUserType.Text = dt.Rows[0][6].ToString();
             }
         }
 
         protected void btnEdit_Click(object sender, EventArgs e)
         {
             con.Open();
-            string query = "update Users set username ='" + txtUsername.Text + "email ='" + txtEmail.Text + "',gender='" + rdbGender.SelectedItem + "',country ='" + ddlcountry.SelectedItem + "' where id = '" + id + "'";
+            string query = "UPDATE Users SET username ='" + txtUsername.Text + 
+                                        "',email ='" + txtEmail.Text + 
+                                        "',gender='" + rdbGender.SelectedItem + 
+                                        "',country ='" + ddlcountry.SelectedItem + 
+                                        "',usertype ='" + ddlUserType.SelectedValue + 
+                                        "' WHERE id = '" + id + "'";
 
             SqlCommand cmd = new SqlCommand(query, con);
             cmd.ExecuteNonQuery();
@@ -58,7 +64,7 @@ namespace XTech
         protected void btnDelete_Click(object sender, EventArgs e)
         {
             con.Open();
-            string query = "delete from Users where id ='" + id + "'";
+            string query = "DELETE FROM Users WHERE id ='" + id + "'";
             SqlCommand cmd = new SqlCommand(query, con);
             cmd.ExecuteNonQuery();
             con.Close();

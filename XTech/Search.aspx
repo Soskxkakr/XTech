@@ -1,13 +1,15 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Layout.Master" AutoEventWireup="true" CodeBehind="Search.aspx.cs" Inherits="XTech.Search" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-        <h1>Search</h1>
-    <p>Name :
-        <asp:TextBox ID="txtName" runat="server"></asp:TextBox>
-        <br/>
-        <asp:Button ID="btnSearch" runat="server" Text="Search" OnClick="btnSearch_Click" />
-    </p>
+    <h2 class="text-center">Search</h2>
+    <div class="row">
+        <div class="mx-auto">
+            <div class="d-inline-block h4">Username:</div>
+            <asp:TextBox ID="txtName" runat="server"></asp:TextBox>
+            <asp:Button ID="btnSearch" runat="server" Text="Search" OnClick="btnSearch_Click" CssClass="btn-block" />
+        </div>
+    </div>
     <asp:Panel ID="Panel1" runat="server">
-        <table class="w-100">
+        <table class="col-lg-6 mt-3 table table-bordered table-striped mx-auto">
             <tr>
                 <td style="width: 179px">Username:</td>
                 <td>
@@ -39,6 +41,15 @@
                         <asp:ListItem>North America</asp:ListItem>
                         <asp:ListItem>Europe</asp:ListItem>
                         <asp:ListItem>South America</asp:ListItem>
+                    </asp:DropDownList>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 179px">User Type:</td>
+                <td>
+                    <asp:DropDownList ID="ddlUserType" runat="server">
+                        <asp:ListItem>Admin</asp:ListItem>
+                        <asp:ListItem>Customer</asp:ListItem>
                     </asp:DropDownList>
                 </td>
             </tr>

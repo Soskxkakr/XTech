@@ -28,7 +28,7 @@ namespace XTech
             string username = "";
             string password = "";
             SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
-            SqlCommand cmd = new SqlCommand("select username, password from Users where email=@email", con);
+            SqlCommand cmd = new SqlCommand("SELECT username, password FROM Users WHERE email=@email", con);
             cmd.Parameters.AddWithValue("@email", txtEmail.Text);
             con.Open();
             using (SqlDataReader sdr = cmd.ExecuteReader())
@@ -43,17 +43,20 @@ namespace XTech
             if (!string.IsNullOrEmpty(password))
             {
                 MailMessage msg = new MailMessage();
-                msg.From = new MailAddress("sathiapriya.apu2020@gmail.com");
+                // msg.From = new MailAddress("sathiapriya.apu2020@gmail.com");
+                msg.From = new MailAddress("nezukokamado.test@gmail.com");
                 msg.To.Add(txtEmail.Text);
                 msg.Subject = "Recover your Password";
-                msg.Body = ("Your username: " + username + "<br/><br/>" + "Your Password: " + password);
+                msg.Body = ("Your Username: " + username + "<br/>" + "Your Password: " + password);
                 msg.IsBodyHtml = true;
 
                 SmtpClient smt = new SmtpClient();
                 smt.Host = "smtp.gmail.com";
                 System.Net.NetworkCredential ntwd = new NetworkCredential();
-                ntwd.UserName = "sathiapriya.apu2020@gmail.com";
-                ntwd.Password = "pass2020";
+                // ntwd.UserName = "sathiapriya.apu2020@gmail.com";
+                // ntwd.Password = "pass2020";
+                ntwd.UserName = "nezukokamado.test@gmail.com";
+                ntwd.Password = "nezuko99@test";
                 smt.UseDefaultCredentials = true;
                 smt.Credentials = ntwd;
                 smt.Port = 587;

@@ -67,9 +67,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\DB-Xtech.mdf" />
-    <Content Include="App_Data\DB-Xtech_log.ldf">
-      <DependentUpon>DB-Xtech.mdf</DependentUpon>
+    <Content Include="AddProduct.aspx" />
+    <Content Include="App_Data\XTechDB.mdf" />
+    <Content Include="App_Data\XTechDB_log.ldf">
+      <DependentUpon>XTechDB.mdf</DependentUpon>
     </Content>
     <Content Include="bg_pics\Registerbg.jpg" />
     <Content Include="css\bootstrap-grid.css" />
@@ -166,11 +167,19 @@
     <Content Include="Login.aspx" />
     <Content Include="Register.aspx" />
     <Content Include="Search.aspx" />
+    <Content Include="Shop.aspx" />
     <Content Include="Test.aspx" />
     <Content Include="ViewAll.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddProduct.aspx.cs">
+      <DependentUpon>AddProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddProduct.aspx.designer.cs">
+      <DependentUpon>AddProduct.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Edit.aspx.cs">
       <DependentUpon>Edit.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -220,6 +229,13 @@
     </Compile>
     <Compile Include="Search.aspx.designer.cs">
       <DependentUpon>Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Shop.aspx.cs">
+      <DependentUpon>Shop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Shop.aspx.designer.cs">
+      <DependentUpon>Shop.aspx</DependentUpon>
     </Compile>
     <Compile Include="Test.aspx.cs">
       <DependentUpon>Test.aspx</DependentUpon>

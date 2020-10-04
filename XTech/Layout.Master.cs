@@ -13,10 +13,19 @@ namespace XTech
         {
 
         }
-        protected void Logout_Click(Object sender, EventArgs e)
+        protected void Logout_Click(object sender, EventArgs e)
         {
             Session.Abandon();
             Response.Redirect("Login.aspx");
+        }
+
+        protected string Check_User()
+        {
+            // <a href="Register.aspx"><i class="fa fa-user"></i>My Account</a>
+            if (Session["uType"] == null)
+                return "Login";
+            else
+                return "My Account";
         }
     }
 }

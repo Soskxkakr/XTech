@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Layout.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="XTech.Login" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    LOGIN<table class="w-100">
+    <h2 class="text-center">LOGIN</h2>
+    <table class="col-lg-6 table table-bordered table-striped mx-auto w-auto">
         <tr>
             <td style="width: 226px; margin-left: 80px">Username:</td>
             <td><asp:TextBox ID="txtUsername" runat="server" Width="224px"></asp:TextBox>
@@ -11,14 +12,14 @@
             <td style="width: 226px">Password:<br />
             </td>
             <td><asp:TextBox ID="txtPassword" runat="server" TextMode="Password" Width="224px"></asp:TextBox>
-                &nbsp;<asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="*Required!" ControlToValidate="txtPassword" ForeColor="#CC3300"></asp:RequiredFieldValidator>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="*Required!" ControlToValidate="txtPassword" ForeColor="#CC3300"></asp:RequiredFieldValidator>
                 </td>
         </tr>
         <tr>
-            <td style="width: 226px">&nbsp;</td>
+            <td style="width: 226px">
+                <asp:Label ID="lblMessage" runat="server"></asp:Label>
+            </td>
             <td>
-                <asp:Label ID="lblMessage0" runat="server"></asp:Label>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:Button ID="btnLogin" runat="server" OnClick="btnLogin_Click" Text="Login" />
                 <asp:Button ID="btnReset" runat="server" OnClick="btnReset_Click" Text="Reset" />
                 &nbsp;<asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">Forgot Password?</asp:LinkButton>
