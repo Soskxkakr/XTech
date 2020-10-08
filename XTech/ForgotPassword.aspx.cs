@@ -43,8 +43,7 @@ namespace XTech
             if (!string.IsNullOrEmpty(password))
             {
                 MailMessage msg = new MailMessage();
-                // msg.From = new MailAddress("sathiapriya.apu2020@gmail.com");
-                msg.From = new MailAddress("nezukokamado.test@gmail.com");
+                msg.From = new MailAddress("sathiapriya.apu2020@gmail.com");
                 msg.To.Add(txtEmail.Text);
                 msg.Subject = "Recover your Password";
                 msg.Body = ("Your Username: " + username + "<br/>" + "Your Password: " + password);
@@ -53,10 +52,8 @@ namespace XTech
                 SmtpClient smt = new SmtpClient();
                 smt.Host = "smtp.gmail.com";
                 System.Net.NetworkCredential ntwd = new NetworkCredential();
-                // ntwd.UserName = "sathiapriya.apu2020@gmail.com";
-                // ntwd.Password = "pass2020";
-                ntwd.UserName = "nezukokamado.test@gmail.com";
-                ntwd.Password = "nezuko99@test";
+                ntwd.UserName = "sathiapriya.apu2020@gmail.com";
+                ntwd.Password = "pass2020";
                 smt.UseDefaultCredentials = true;
                 smt.Credentials = ntwd;
                 smt.Port = 587;

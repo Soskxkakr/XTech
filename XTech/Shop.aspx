@@ -17,6 +17,9 @@
                             </div>
                         </div>
                     </div>
+                    <div class="row">
+                        <% =SetItems() %>
+                    </div>
                 </div>
             </div>
         </div>

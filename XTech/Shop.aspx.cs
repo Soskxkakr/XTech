@@ -57,6 +57,46 @@ namespace XTech
             con.Close();
             return htmlstr;
         }
+
+        public string SetItems()
+        {
+            string htmlstr = "";
+
+            var Image = new ImageData();
+
+            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+            con.Open();
+            string query = "SELECT * FROM Products";
+            SqlCommand cmd = new SqlCommand(query, con);
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+                Image.Id = reader.GetInt32(0);
+                Image.ImageFile = reader.GetString(1);
+                Image.ImageName = reader.GetString(2);
+                Image.Category = reader.GetString(3);
+                Image.Stock = reader.GetInt32(4);
+                Image.Price = reader.GetInt32(5);
+
+                htmlstr += 
+                    "<div class='col-lg-4 col-md-6 col-sm-6'>" +
+                        "<div class='product__item'>" +
+                            "<div class='product__item__pic set-bg' data-setbg=img/product/" + Image.ImageFile + ">" +
+                                "<ul class='product__item__pic__hover'>" +
+                                    "<li><a href='#'><i class='fa fa-shopping-cart'></i></a></li>" +
+                                "</ul>" +
+                            "</div>" +
+                            "<div class='product__item__text'>" +
+                                "<h6><a href='#'>" + Image.ImageName + "</a></h6>" +
+                                "<h5>RM " + Image.Price + "</h5>" +
+                            "</div>" +
+                        "</div>" +
+                    "</div>";
+            }
+
+            return htmlstr;
+        }
     }
 
     public class ImageData
