@@ -80,7 +80,7 @@ namespace XTech
                 Image.Price = reader.GetInt32(5);
 
                 htmlstr += 
-                    "<div class='col-lg-4 col-md-6 col-sm-6'>" +
+                    "<div class='col-lg-3 col-md-6 col-sm-6'>" +
                         "<div class='product__item'>" +
                             "<div class='product__item__pic set-bg' data-setbg=img/product/" + Image.ImageFile + ">" +
                                 "<ul class='product__item__pic__hover'>" +
