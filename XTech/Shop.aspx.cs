@@ -21,7 +21,6 @@ namespace XTech
             string htmlstr = "";
 
             var Image = new ImageData();
-
             SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
             con.Open();
             string query = "SELECT * FROM Products";
@@ -47,11 +46,12 @@ namespace XTech
                             "</div>" +
                             "<div class=product__discount__item__text>" +
                                 "<span>" + Image.Category +"</span>" +
-                                "<h5>" + Image.ImageName + "</h5>" +
+                                "<h5><a href=ProductDetails.aspx?id=" + id + ">Image.ImageName</a></h5>" +
                                 "<div class=product__item__price>" + "RM " + Image.Price + "</div>" +
                             "</div>" +
                         "</div>" +
                     "</div>";
+
                 }                
             }
             con.Close();
@@ -88,7 +88,7 @@ namespace XTech
                                 "</ul>" +
                             "</div>" +
                             "<div class='product__item__text'>" +
-                                "<h6><a href='#'>" + Image.ImageName + "</a></h6>" +
+                                "<h6>" +Image.ImageName+"</h6>" +
                                 "<h5>RM " + Image.Price + "</h5>" +
                             "</div>" +
                         "</div>" +
