@@ -123,7 +123,6 @@
     <Content Include="img\latest-product\lp-1.jpg" />
     <Content Include="img\latest-product\lp-2.jpg" />
     <Content Include="img\latest-product\lp-3.jpg" />
-    <Content Include="img\logo.png" />
     <Content Include="img\payment-item.png" />
     <Content Include="img\product\details\product-details-1.jpg" />
     <Content Include="img\product\details\product-details-2.jpg" />
@@ -152,6 +151,8 @@
     <Content Include="img\product\product-7.jpg" />
     <Content Include="img\product\product-8.jpg" />
     <Content Include="img\product\product-9.jpg" />
+    <Content Include="img\x.png" />
+    <Content Include="img\xtech.png" />
     <Content Include="js\bootstrap.js" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\jquery-3.3.1.min.js" />
