@@ -170,6 +170,7 @@
     <Content Include="Register.aspx" />
     <Content Include="Search.aspx" />
     <Content Include="Shop.aspx" />
+    <Content Include="ShopCart.aspx" />
     <Content Include="Test.aspx" />
     <Content Include="ViewAll.aspx" />
     <Content Include="Web.config" />
@@ -246,6 +247,13 @@
     <Compile Include="Shop.aspx.designer.cs">
       <DependentUpon>Shop.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ShopCart.aspx.cs">
+      <DependentUpon>ShopCart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ShopCart.aspx.designer.cs">
+      <DependentUpon>ShopCart.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Test.aspx.cs">
       <DependentUpon>Test.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -298,6 +306,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
