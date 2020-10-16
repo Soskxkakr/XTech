@@ -20,7 +20,7 @@ namespace XTech
             id = Convert.ToInt16(Request.QueryString["id"]);
             if (!IsPostBack)
             {
-                SqlDataAdapter da = new SqlDataAdapter("select * from Products where id= '" + id + "'", con);
+                SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM Products WHERE id= '" + id + "'", con);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 lblName.Text = dt.Rows[0][2].ToString();
@@ -28,10 +28,23 @@ namespace XTech
                 lblStock.Text = dt.Rows[0][4].ToString();
                 lblPrice.Text = dt.Rows[0][5].ToString();
             }
-
         }
 
+        public string SetPhoto()
+        {
+            string htmlstr = "";
+            id = Convert.ToInt16(Request.QueryString["id"]);
+            SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM Products WHERE id= '" + id + "'", con);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
 
+            htmlstr =
+                "<img class='product__details__pic__items--large' src='img/product/" + dt.Rows[0][1].ToString() +
+                "' alt=" + dt.Rows[0][2].ToString() + ">"; 
+
+
+            return htmlstr;
+        }
 
         protected void DropDownList1_ItemCommand(object sender, EventArgs e)
         {
