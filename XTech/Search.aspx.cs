@@ -18,7 +18,7 @@ namespace XTech
         {
             if (Session["uType"] == null || !Session["uType"].Equals("Admin"))
                 Response.Redirect("Login.aspx");
-            Panel1.Visible = false;
+            Panel1.Visible = false; 
         }
 
         protected void btnSearch_Click(object sender, EventArgs e)
