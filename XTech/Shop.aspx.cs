@@ -46,7 +46,7 @@ namespace XTech
                             "</div>" +
                             "<div class=product__discount__item__text>" +
                                 "<span>" + Image.Category +"</span>" +
-                                "<h5><a href=ProductDetails.aspx?id=" + Image.Id + ">" + Image.ImageName + "</a></h5>" +
+                                "<h5><a href=ProductDetails.aspx?id=" + id + ">Image.ImageName</a></h5>" +
                                 "<div class=product__item__price>" + "RM " + Image.Price + "</div>" +
                             "</div>" +
                         "</div>" +
@@ -84,7 +84,7 @@ namespace XTech
                         "<div class='product__item'>" +
                             "<div class='product__item__pic set-bg' data-setbg=img/product/" + Image.ImageFile + ">" +
                                 "<ul class='product__item__pic__hover'>" +
-                                    "<li><a href=ProductDetails.aspx?id=" + Image.Id + "><i class='fa fa-shopping-cart'></i></a></li>" +
+                                    "<li><a href='#'><i class='fa fa-shopping-cart'></i></a></li>" +
                                 "</ul>" +
                             "</div>" +
                             "<div class='product__item__text'>" +

@@ -1,5 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Layout.Master" AutoEventWireup="true" CodeBehind="ProductDetails.aspx.cs" Inherits="XTech.ProductDetails" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+
     <!-- Product Details -->
     <section class="product-details spad">
         <div class="container">
@@ -7,7 +8,8 @@
                 <div class="col-lg-6 col-md-6">
                     <div class="product__details__pic">
                         <div class="product__details__pic__item">
-                            <% =SetPhoto() %>
+                            <img class="product__details__pic__item--large"
+                                src="img/product/details/product-details-1.jpg" alt="">
                         </div>
                         <div class="product__details__pic__slider owl-carousel">
                             <img data-imgbigurl="img/product/details/product-details-2.jpg"
@@ -24,7 +26,7 @@
                 <div class="col-lg-6 col-md-6">
                     <div class="product__details__text">
                         <h3>
-                            <asp:Label ID="lblName" runat="server"></asp:Label>
+            <asp:Label ID="lblName" runat="server"></asp:Label>
                         </h3>
                         <div class="product__details__rating">
                             <i class="fa fa-star"></i>
@@ -36,7 +38,7 @@
                         </div>
                         <div class="product__details__price">
                             RM
-                            <asp:Label ID="lblPrice" runat="server"></asp:Label>
+            <asp:Label ID="lblPrice" runat="server"></asp:Label>
                         </div>
                         <p>Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vestibulum ac diam sit amet quam
                             vehicula elementum sed sit amet dui. Sed porttitor lectus nibh. Vestibulum ac diam sit amet
@@ -63,10 +65,10 @@
                         <a href="#" class="primary-btn">ADD TO CART</a><asp:Button ID="AddToCart" runat="server" CommandArgument='<%# Eval("designid")%>' Text="Add To Cart" CommandName="addtocart" OnClick="AddToCart_Click" />
 &nbsp;<a href="#" class="heart-icon"><span class="icon_heart_alt"></span></a><ul>
                             <li><b>Availability</b>
-                                <asp:Label ID="lblStock" runat="server"></asp:Label>
+            <asp:Label ID="lblStock" runat="server"></asp:Label>
                             </li>
                             <li><b>Category</b>
-                                <asp:Label ID="lblCategory" runat="server"></asp:Label>
+            <asp:Label ID="lblCategory" runat="server"></asp:Label>
                             </li>
                             <li><b>Weight</b> <span>0.5 kg</span></li>
                             <li><b>Share on</b>
@@ -163,4 +165,8 @@
             </div>
         </div>
     </section>
+
+
+      
+
 </asp:Content>
