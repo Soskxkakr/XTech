@@ -11,7 +11,12 @@ namespace XTech
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            System.Diagnostics.Debug.WriteLine("Welcome");
+        }
 
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Debug.WriteLine("Hello World");
         }
     }
 }

@@ -46,16 +46,9 @@ namespace XTech
             return htmlstr;
         }
 
-        protected void DropDownList1_ItemCommand(object sender, EventArgs e)
+        protected void btnAdd_Click(object sender, EventArgs e)
         {
-               DropDownList dlist = (DropDownList)(e.Item.FindControl("DropDownList1"));
-               Response.Redirect("ShopCart.aspx?id=" + e.CommandArgument.ToString() + "&quantity=" + dlist.SelectedItem.ToString());
-              
-        }
 
-        protected void AddToCart_Click(object sender, EventArgs e)
-        {
-            
         }
     }
 }

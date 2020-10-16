@@ -43,25 +43,13 @@
                             quam vehicula elementum sed sit amet dui. Proin eget tortor risus.</p>
                         <div class="product__details__quantity">
                             <div class="quantity">
-                                <asp:DropDownList ID="DropDownList1" runat="server" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged">
-                                    <asp:ListItem>1</asp:ListItem>
-                                    <asp:ListItem>2</asp:ListItem>
-                                    <asp:ListItem>3</asp:ListItem>
-                                    <asp:ListItem>4</asp:ListItem>
-                                    <asp:ListItem>5</asp:ListItem>
-                                    <asp:ListItem>6</asp:ListItem>
-                                    <asp:ListItem>7</asp:ListItem>
-                                    <asp:ListItem>8</asp:ListItem>
-                                    <asp:ListItem>9</asp:ListItem>
-                                    <asp:ListItem>10</asp:ListItem>
-                                </asp:DropDownList>
                                 <div class="pro-qty">
-                                    <input type="text" value="1">
+                                    <input type="number" value="1">
                                 </div>
                             </div>
                         </div>
-                        <a href="#" class="primary-btn">ADD TO CART</a><asp:Button ID="AddToCart" runat="server" CommandArgument='<%# Eval("designid")%>' Text="Add To Cart" CommandName="addtocart" OnClick="AddToCart_Click" />
-&nbsp;<a href="#" class="heart-icon"><span class="icon_heart_alt"></span></a><ul>
+                        <asp:Button ID="btnAdd" CssClass="primary-btn" Text="ADD TO CART" OnClick="btnAdd_Click"/>
+                        <ul>
                             <li><b>Availability</b>
                                 <asp:Label ID="lblStock" runat="server"></asp:Label>
                             </li>
