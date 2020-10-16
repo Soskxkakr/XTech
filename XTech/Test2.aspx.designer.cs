@@ -11,7 +11,7 @@ namespace XTech
 {
 
 
-    public partial class Test
+    public partial class Test2
     {
 
         /// <summary>
