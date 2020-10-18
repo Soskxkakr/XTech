@@ -32,7 +32,15 @@ namespace XTech
                 string category = reader.GetString(3);
                 int stock = reader.GetInt32(4);
                 int price = reader.GetInt32(5);
-                htmlStr += "<tr><td>" + Image + "</td><td>" + name + "</td><td>" + category + "</td><td>" + stock + "</td><td>" + price + "</td><td><a href=EditProduct.aspx?id=" + id + ">Edit</a></td></tr>";
+                htmlStr += 
+                    "<tr>" +
+                    "   <td><img class='product__details__pic__items--small' src='img/product/" + Image + "'/></td>" +
+                    "   <td class='align-middle'>" + name + "</td>" +
+                    "   <td class='align-middle'> " + category + "</td>" +
+                    "   <td class='align-middle'>" + stock + "</td>" +
+                    "   <td class='align-middle'>RM " + price + "</td>" +
+                    "   <td class='align-middle'><a href=EditProduct.aspx?id=" + id + ">Edit</a></td>" +
+                    "</tr>";
             }
             con.Close();
             return htmlStr;

@@ -7,7 +7,8 @@
                 <tr>
                     <td>Image File:</td>
                     <td>
-                        <asp:FileUpload ID="imageUpload" runat="server" width="359"/>
+                        <label id="lblImage" runat="server"></label>
+                        <p style="color:red">Unable to edit image</p>
                     </td>
                 </tr>
                 <tr>

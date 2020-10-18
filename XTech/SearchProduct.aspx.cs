@@ -26,18 +26,24 @@ namespace XTech
             string htmlStr = "";
             SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["Connectionstring"].ConnectionString);
             con.Open();
-            string query = "select * from Products where name Like'%" + txtProdName.Text + "%'";
+            string query = "SELECT * FROM Products WHERE name LIKE'%" + txtProdName.Text + "%'";
             SqlCommand cmd = new SqlCommand(query, con);
             SqlDataReader reader = cmd.ExecuteReader();
 
             while(reader.Read())
             {
                 int id = reader.GetInt32(0);
-                string Image = reader.GetString(1);
+                string image = reader.GetString(1);
                 string name = reader.GetString(2);
                 string category = reader.GetString(3);
                 int price = reader.GetInt32(5);
-                htmlStr += "<tr><td>" + name + "</td><td>" + category + "</td><td>" + price + "</td><img scr=" + Image + "style=\"width: 50px; height: 50px\" /></td></tr>";
+                htmlStr += 
+                    "<tr>" +
+                    "   <td class='align-middle'>" + name + "</td>" +
+                    "   <td class='align-middle'>" + category + "</td>" +
+                    "   <td class='align-middle'>RM " + price + "</td>" +
+                    "   <td><img src='img/product/" + image + "'class='product__details__pic__items--small' /></td>" +
+                    "</tr>";
             }
             con.Close();
             return htmlStr;

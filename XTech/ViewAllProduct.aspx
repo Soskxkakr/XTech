@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <h2 class="text-center">View All Product</h2>
     <div class="row">
-        <table class="col-lg-6 table table-bordered table-striped mx-auto w-auto" border="1" style="background-color: #f1cdcd">
+        <table class="col-lg-7 table table-bordered table-striped mx-auto w-auto text-center" border="1" style="background-color: #f1cdcd">
             <tr style="font-weight: bold;">
                 <td style="height: 42px">Image</td>
                 <td style="height: 42px">Product Name</td>

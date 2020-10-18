@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Layout.Master" AutoEventWireup="true" CodeBehind="SearchProduct.aspx.cs" Inherits="XTech.SearchProduct" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <h1>Search Product</h1>
-    <table class="w-100">
+    <h1 class="text-center">Search Product</h1>
+    <table class="table table-borderless mx-auto w-auto">
         <tr>
             <td>Product Name:</td>
             <td>
@@ -16,16 +16,17 @@
             </td>
         </tr>
     </table>
-    <asp:Panel ID="Panel1" runat="server">
-        <table class="w-100" border="1">
-            <tr style=""font-weight: bold;">
-                <td>Name</td>
-                <td>Category</td>
-                <td>Price</td>
-                <td>Image</td>
-            </tr>
-            <%=fetchProduct() %>
-        </table>
-    </asp:Panel>
-    <br />
+    <div class="d-flex justify-content-center p-3">
+        <asp:Panel ID="Panel1" runat="server" CssClass="col-lg-6 text-center" BorderStyle="Groove">
+            <table class="table table-striped">
+                <tr>
+                    <td>Name</td>
+                    <td>Category</td>
+                    <td>Price</td>
+                    <td>Image</td>
+                </tr>
+                <%=fetchProduct() %>
+            </table>
+        </asp:Panel>
+    </div>
 </asp:Content>
