@@ -33,7 +33,7 @@ namespace XTech
             }
             else
             {
-                Panel1.Visible = true;
+                 
                 SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM Users WHERE username='" + txtName.Text + "'", con);
                 DataTable dt = new DataTable();
                 da.Fill(dt);

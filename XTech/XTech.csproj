@@ -83,6 +83,7 @@
     <Content Include="css\slicknav.css" />
     <Content Include="css\style.css" />
     <Content Include="Edit.aspx" />
+    <Content Include="EditProduct.aspx" />
     <Content Include="fonts\ElegantIcons.svg" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="ForgotPassword.aspx" />
@@ -174,6 +175,7 @@
     <Content Include="ShopCart.aspx" />
     <Content Include="Test.aspx" />
     <Content Include="ViewAll.aspx" />
+    <Content Include="ViewAllProduct.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -191,6 +193,13 @@
     </Compile>
     <Compile Include="Edit.aspx.designer.cs">
       <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditProduct.aspx.cs">
+      <DependentUpon>EditProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditProduct.aspx.designer.cs">
+      <DependentUpon>EditProduct.aspx</DependentUpon>
     </Compile>
     <Compile Include="ForgotPassword.aspx.cs">
       <DependentUpon>ForgotPassword.aspx</DependentUpon>
@@ -277,6 +286,13 @@
     </Compile>
     <Compile Include="ViewAll.aspx.designer.cs">
       <DependentUpon>ViewAll.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewAllProduct.aspx.cs">
+      <DependentUpon>ViewAllProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewAllProduct.aspx.designer.cs">
+      <DependentUpon>ViewAllProduct.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
