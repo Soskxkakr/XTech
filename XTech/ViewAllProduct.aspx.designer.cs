@@ -11,7 +11,7 @@ namespace XTech
 {
 
 
-    public partial class SearchProduct
+    public partial class ViewAllProduct
     {
     }
 }
