@@ -48,7 +48,8 @@
                                 </div>
                             </div>
                         </div>
-                        <a href="#" class="primary-btn">ADD TO CART</a>&nbsp;<a href="#" class="heart-icon"><span class="icon_heart_alt"></span></a><ul>
+                        <asp:Button ID="btnAdd" CssClass="primary-btn" runat="server" Text="ADD TO CART" OnClick="btnAdd_Click" />
+                        <ul>
                             <li><b>Availability</b>
                                 <asp:Label ID="lblStock" runat="server"></asp:Label>
                             </li>

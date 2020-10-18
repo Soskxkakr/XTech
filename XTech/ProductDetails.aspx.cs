@@ -13,21 +13,55 @@ namespace XTech
 {
     public partial class ProductDetails : System.Web.UI.Page
     {
+        private Product currentProduct;
+        private Cart myCart = new Cart();
         SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
-        public static int id = 0;
+        private static int id = 0;
+
         protected void Page_Load(object sender, EventArgs e)
         {
             id = Convert.ToInt16(Request.QueryString["id"]);
-            if (!IsPostBack)
+            string productKey = "CurrentProduct_" + id.ToString();
+
+            if (Session[productKey] != null)
+            {
+                this.currentProduct = (Product) Session[productKey];
+            }
+            else
             {
                 SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM Products WHERE id= '" + id + "'", con);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
-                lblName.Text = dt.Rows[0][2].ToString();
-                lblCategory.Text = dt.Rows[0][3].ToString();
-                lblStock.Text = dt.Rows[0][4].ToString();
-                lblPrice.Text = dt.Rows[0][5].ToString();
+                this.currentProduct = new Product();
+                this.currentProduct.Id = id;
+                this.currentProduct.ImageFile = dt.Rows[0][1].ToString();
+                this.currentProduct.Name = dt.Rows[0][2].ToString();
+                this.currentProduct.Category = dt.Rows[0][3].ToString();
+                this.currentProduct.Stock = Convert.ToInt32(dt.Rows[0][4].ToString());
+                this.currentProduct.Price = Convert.ToInt32(dt.Rows[0][5].ToString());
+                Session[productKey] = this.currentProduct;
             }
+            lblName.Text = this.currentProduct.Name;
+            lblCategory.Text = this.currentProduct.Category;
+            lblStock.Text = this.currentProduct.Stock.ToString();
+            lblPrice.Text = this.currentProduct.Price.ToString();
+        }
+
+        protected void btnAdd_Click(object sender, EventArgs e)
+        {
+            if (Session["currentCart"] != null)
+            {
+                // Update the cart from previous action
+                this.myCart = (Cart) Session["currentCart"];
+            }
+            this.myCart.addProduct(this.currentProduct);
+            Session["currentCart"] = this.myCart;
+            foreach (Product i in this.myCart.getProducts())
+            {
+                System.Diagnostics.Debug.WriteLine("This is my cart: " + i.Name);
+            }
+            System.Diagnostics.Debug.WriteLine("Cart size: " + myCart.size());
+            System.Diagnostics.Debug.WriteLine("================================================");
         }
 
         public string SetPhoto()
@@ -39,8 +73,8 @@ namespace XTech
             da.Fill(dt);
 
             htmlstr =
-                "<img class='product__details__pic__items--large' src='img/product/" + dt.Rows[0][1].ToString() +
-                "' alt=" + dt.Rows[0][2].ToString() + ">"; 
+                "<img class='product__details__pic__items--large' src='img/product/" + currentProduct.ImageFile +
+                "' alt=" + currentProduct.Name + ">"; 
 
 
             return htmlstr;

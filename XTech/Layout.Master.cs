@@ -9,10 +9,18 @@ namespace XTech
 {
     public partial class Layout : System.Web.UI.MasterPage
     {
-        
+        private Cart myCart = new Cart();
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["currentCart"] != null)
+            {
+                myCart = (Cart) Session["currentCart"];
+                lblCartQty.Text = myCart.size().ToString();
+            }
+            else
+            {
+                lblCartQty.Text = "0";
+            }
         }
         protected void Logout_Click(object sender, EventArgs e)
         {
@@ -22,7 +30,6 @@ namespace XTech
 
         protected string Check_User()
         {
-            // <a href="Register.aspx"><i class="fa fa-user"></i>My Account</a>
             if (Session["uType"] == null)
                 return "Login";
             else
