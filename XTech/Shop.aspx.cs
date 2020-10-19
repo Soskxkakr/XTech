@@ -43,9 +43,11 @@ namespace XTech
                     htmlstr =
                     "<div class=col-lg-4>" +
                         "<div class=product__discount__item>" +
+                            "<a href=ProductDetails.aspx?id=" + currentProduct.Id + ">" +
                             "<div class='product__discount__item__pic set-bg' data-setbg=img/product/" + currentProduct.ImageFile + ">" +
                                 "<div class=product__discount__percent>" + "HOT!!!" + "</div>" +
                             "</div>" +
+                            "</a>" +
                             "<div class=product__discount__item__text>" +
                                 "<span>" + currentProduct.Category +"</span>" +
                                 "<h5><a href=ProductDetails.aspx?id=" + currentProduct.Id + ">" + currentProduct.Name + "</a></h5>" +

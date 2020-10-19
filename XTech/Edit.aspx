@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Layout.Master" AutoEventWireup="true" CodeBehind="Edit.aspx.cs" Inherits="XTech.Edit" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <table class="w-100">
+    <p class="h2 text-center">Edit</p>
+    <table class="col-lg-3 mx-auto table table-bordered table-striped">
         <tr>
             <td style="width: 179px">Username:</td>
             <td>

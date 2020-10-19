@@ -56,12 +56,6 @@ namespace XTech
             }
             this.myCart.addProduct(this.currentProduct);
             Session["currentCart"] = this.myCart;
-            foreach (Product i in this.myCart.getProducts())
-            {
-                System.Diagnostics.Debug.WriteLine("This is my cart: " + i.Name);
-            }
-            System.Diagnostics.Debug.WriteLine("Cart size: " + myCart.size());
-            System.Diagnostics.Debug.WriteLine("================================================");
         }
 
         public string SetPhoto()

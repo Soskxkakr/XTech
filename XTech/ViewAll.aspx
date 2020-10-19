@@ -11,7 +11,7 @@
                 <td style="height: 42px">User Type</td>
                 <td style="height: 42px">Edit</td>
             </tr>
-            <%=fetchData() %>
+            <% =fetchData() %>
         </table>
     </div>
 </asp:Content>
