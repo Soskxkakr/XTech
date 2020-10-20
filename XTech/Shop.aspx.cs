@@ -98,7 +98,6 @@ namespace XTech
                         "</div>" +
                     "</div>";
             }
-
             return htmlstr;
         }
     }
