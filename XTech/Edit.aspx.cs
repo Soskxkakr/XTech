@@ -23,7 +23,6 @@ namespace XTech
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 txtUsername.Text = dt.Rows[0][1].ToString();
-                txtPassword.Text = dt.Rows[0][2].ToString();
                 txtEmail.Text = dt.Rows[0][4].ToString();
                 rdbGender.Text = dt.Rows[0][5].ToString();
                 ddlcountry.Text = dt.Rows[0][6].ToString();
@@ -34,7 +33,7 @@ namespace XTech
         protected void btnEdit_Click1(object sender, EventArgs e)
         {
             con.Open();
-            string query = "UPDATE Users SET username ='" + txtUsername.Text + "',password ='" + txtPassword.Text + "'," + "email ='" + txtEmail.Text + "',gender='" + rdbGender.SelectedItem + "',country ='" + ddlcountry.SelectedItem + "' where id = '" + id + "'";
+            string query = "UPDATE Users SET username ='" + txtUsername.Text + "email ='" + txtEmail.Text + "',gender='" + rdbGender.SelectedItem + "',country ='" + ddlcountry.SelectedItem + "' where id = '" + id + "'";
 
             SqlCommand cmd = new SqlCommand(query, con);
             cmd.ExecuteNonQuery();

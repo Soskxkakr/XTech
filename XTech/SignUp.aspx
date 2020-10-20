@@ -1,6 +1,6 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Layout.Master" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="XTech.Register" UnobtrusiveValidationMode="none" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Layout.Master" AutoEventWireup="true" CodeBehind="SignUp.aspx.cs" Inherits="XTech.SignUp" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <h2 class="text-center">Register</h2>
+        <h2 class="text-center">SignUp</h2>
     <div class="row">
         <table class="col-lg-6 table table-bordered table-striped mx-auto w-auto">
             <tr>
@@ -58,7 +58,6 @@
                 <td style="width: 359px">User Type</td>
                 <td>
                     <asp:DropDownList ID="ddlUserType" runat="server">
-                        <asp:ListItem>Admin</asp:ListItem>
                         <asp:ListItem>Customer</asp:ListItem>
                     </asp:DropDownList>
                 </td>
@@ -68,8 +67,8 @@
                     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Users]"></asp:SqlDataSource>
                 </td>
                 <td>
-                    <asp:Button ID="btnRegister" runat="server" OnClick="btnRegister_Click" Text="Register" />
-                    <asp:Button ID="btnCancel" runat="server" OnClick="btnCancel_Click" Text="Cancel" />
+                    &nbsp;<asp:Button ID="btnSignup" runat="server" OnClick="btnSignup_Click" Text="Signup" />
+                    <asp:Button ID="btnClear" runat="server" OnClick="btnClear_Click1" Text="Clear" />
                     <asp:Label ID="lblMessage" runat="server"></asp:Label>
                 </td>
             </tr>

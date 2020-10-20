@@ -9,22 +9,18 @@ using System.Web.UI.WebControls;
 
 namespace XTech
 {
-    public partial class Register : System.Web.UI.Page
+    public partial class SignUp : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
-        protected void btnCancel_Click(object sender, EventArgs e)
+        protected void CustomValidator1_ServerValidate(object source, ServerValidateEventArgs args)
         {
-            txtUsername.Text = string.Empty;
-            txtPassword.Text = string.Empty;
-            txtEmail.Text = string.Empty;
-            rdbGender.SelectedIndex = 0;
-            ddlcountry.SelectedIndex = 0;
+            args.IsValid = (args.Value.Length < 8 || args.Value.Length > 16) ? false : true;
         }
 
-        protected void btnRegister_Click(object sender, EventArgs e)
+        protected void btnSignup_Click(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
             try
@@ -59,9 +55,13 @@ namespace XTech
             }
         }
 
-        protected void CustomValidator1_ServerValidate(object source, ServerValidateEventArgs args)
+        protected void btnClear_Click1(object sender, EventArgs e)
         {
-            args.IsValid = (args.Value.Length < 8 || args.Value.Length > 16) ? false : true;
+            txtUsername.Text = string.Empty;
+            txtPassword.Text = string.Empty;
+            txtEmail.Text = string.Empty;
+            rdbGender.SelectedIndex = 0;
+            ddlcountry.SelectedIndex = 0;
         }
     }
 }

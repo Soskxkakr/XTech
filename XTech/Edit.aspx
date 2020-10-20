@@ -9,12 +9,6 @@
             </td>
         </tr>
         <tr>
-            <td style="width: 179px; height: 38px">Password:</td>
-            <td style="height: 38px">
-                <asp:TextBox ID="txtPassword" runat="server" TextMode="Password"></asp:TextBox>
-            </td>
-        </tr>
-        <tr>
             <td style="width: 179px">Email:</td>
             <td>
                 <asp:TextBox ID="txtEmail" runat="server" TextMode="Email"></asp:TextBox>

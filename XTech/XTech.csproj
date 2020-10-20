@@ -173,6 +173,7 @@
     <Content Include="SearchProduct.aspx" />
     <Content Include="Shop.aspx" />
     <Content Include="ShopCart.aspx" />
+    <Content Include="SignUp.aspx" />
     <Content Include="Test.aspx" />
     <Content Include="ViewAll.aspx" />
     <Content Include="ViewAllProduct.aspx" />
@@ -272,6 +273,13 @@
     </Compile>
     <Compile Include="ShopCart.aspx.designer.cs">
       <DependentUpon>ShopCart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SignUp.aspx.cs">
+      <DependentUpon>SignUp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SignUp.aspx.designer.cs">
+      <DependentUpon>SignUp.aspx</DependentUpon>
     </Compile>
     <Compile Include="Test.aspx.cs">
       <DependentUpon>Test.aspx</DependentUpon>

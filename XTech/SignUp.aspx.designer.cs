@@ -11,7 +11,7 @@ namespace XTech
 {
 
 
-    public partial class Register
+    public partial class SignUp
     {
 
         /// <summary>
@@ -132,22 +132,22 @@ namespace XTech
         protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
 
         /// <summary>
-        /// btnRegister control.
+        /// btnSignup control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnRegister;
+        protected global::System.Web.UI.WebControls.Button btnSignup;
 
         /// <summary>
-        /// btnCancel control.
+        /// btnClear control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCancel;
+        protected global::System.Web.UI.WebControls.Button btnClear;
 
         /// <summary>
         /// lblMessage control.
