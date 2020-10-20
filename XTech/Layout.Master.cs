@@ -40,7 +40,6 @@ namespace XTech
 
         protected void btnSubscribe_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Debug.WriteLine("LMAOOOOOOOOO 5");
             MailMessage msg = new MailMessage();
             msg.From = new MailAddress("sathiapriya.apu2020@gmail.com");
             msg.To.Add(txtEmailSub.Text);

@@ -20,42 +20,58 @@ namespace XTech
             txtUsername.Text = string.Empty;
             txtPassword.Text = string.Empty;
             txtEmail.Text = string.Empty;
-            rdbGender.SelectedIndex = 0;
+            rdbGender.SelectedIndex = 1;
             ddlcountry.SelectedIndex = 0;
         }
 
         protected void btnRegister_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
-            try
+            if (txtUsername.Text != "" &&
+                txtPassword.Text != "" &&
+                txtPassword.Text.Length > 8 &&
+                txtPassword.Text.Length < 16 &&
+                txtEmail.Text != "")
             {
-                con.Open();
-                string query = "SELECT count(*) FROM Users WHERE email ='" + txtEmail.Text + "'";
-                SqlCommand cmd = new SqlCommand(query, con);
-                int check = Convert.ToInt32(cmd.ExecuteScalar().ToString());
-                if (check > 0)
+                SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
+                try
                 {
-                    Response.Write("<script type=\"text/javascript\">alert('Sorry! Email already exist.');</script>");
+                    con.Open();
+                    string query = "SELECT count(*) FROM Users WHERE email ='" + txtEmail.Text + "'";
+                    SqlCommand cmd = new SqlCommand(query, con);
+                    int check = Convert.ToInt32(cmd.ExecuteScalar().ToString());
+                    if (check > 0)
+                    {
+                        Response.Write("<script type=\"text/javascript\">alert('Sorry! Email already exist.');</script>");
+                    }
+                    else
+                    {
+                        string query1 = "INSERT INTO Users (username, password, email, gender, country, usertype) values (@uname,@pword,@email,@gender, @country, @usertype) ";
+                        SqlCommand cmd1 = new SqlCommand(query1, con);
+                        cmd1.Parameters.AddWithValue("@uname", txtUsername.Text);
+                        cmd1.Parameters.AddWithValue("@pword", txtPassword.Text);
+                        cmd1.Parameters.AddWithValue("@email", txtEmail.Text);
+                        cmd1.Parameters.AddWithValue("@gender", rdbGender.SelectedItem.ToString());
+                        cmd1.Parameters.AddWithValue("@country", ddlcountry.SelectedItem.ToString());
+                        cmd1.Parameters.AddWithValue("@usertype", ddlUserType.SelectedItem.ToString());
+                        cmd1.ExecuteNonQuery();
+                        Response.Write("<script type=\text/javascript\">alert('Customer Added! ');</script>");
+                        lblMessage.ForeColor = System.Drawing.Color.Green;
+                        lblMessage.Text = "Successfully Added!";
+                    }
                 }
-                else
+                catch (Exception ex)
                 {
-                    string query1 = "INSERT INTO Users (username, password, email, gender, country, usertype) values (@uname,@pword,@email,@gender, @country, @usertype) ";
-                    SqlCommand cmd1 = new SqlCommand(query1, con);
-                    cmd1.Parameters.AddWithValue("@uname", txtUsername.Text);
-                    cmd1.Parameters.AddWithValue("@pword", txtPassword.Text);
-                    cmd1.Parameters.AddWithValue("@email", txtEmail.Text);
-                    cmd1.Parameters.AddWithValue("@gender", rdbGender.SelectedItem.ToString());
-                    cmd1.Parameters.AddWithValue("@country", ddlcountry.SelectedItem.ToString());
-                    cmd1.Parameters.AddWithValue("@usertype", ddlUserType.SelectedItem.ToString());
-                    cmd1.ExecuteNonQuery();
-                    Response.Write("<script type=\text/javascript\">alert('Customer Added! ');</script>");
-                    lblMessage.ForeColor = System.Drawing.Color.Green;
-                    lblMessage.Text = "Successfully Added!";
+                    Response.Write("Error: " + ex.ToString());
                 }
             }
-            catch (Exception ex)
+            else
             {
-                Response.Write("Error: " + ex.ToString());
+                txtUsername.Text = "";
+                txtPassword.Text = "";
+                txtEmail.Text = "";
+                rdbGender.SelectedIndex = 1;
+                ddlcountry.SelectedIndex = 0;
+                ddlUserType.SelectedIndex = 0;
             }
         }
 

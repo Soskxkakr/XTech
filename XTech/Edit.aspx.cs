@@ -23,9 +23,9 @@ namespace XTech
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 txtUsername.Text = dt.Rows[0][1].ToString();
-                txtEmail.Text = dt.Rows[0][4].ToString();
-                rdbGender.Text = dt.Rows[0][5].ToString();
-                ddlcountry.Text = dt.Rows[0][6].ToString();
+                txtEmail.Text = dt.Rows[0][3].ToString();
+                rdbGender.Text = dt.Rows[0][4].ToString();
+                ddlcountry.Text = dt.Rows[0][5].ToString();
             }
 
         }
