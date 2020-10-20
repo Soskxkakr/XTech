@@ -90,6 +90,7 @@
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="ForgotPassword.aspx" />
     <Content Include="Home.aspx" />
+    <Content Include="img\Ahmed_Profile_Pic.jpeg" />
     <Content Include="img\banner\banner-1.jpg" />
     <Content Include="img\banner\banner-2.jpg" />
     <Content Include="img\blog\blog-1.jpg" />
