@@ -195,8 +195,8 @@
                         <div class="footer__widget">
                             <h6>Useful Links</h6>
                             <ul>
-                                <li><a href="#">About Us</a></li> <!-- NOTE -->
-                                <li><a href="#">Contact</a></li> <!-- NOTE -->
+                                <li><a href="AboutUs.aspx">About Us</a></li> <!-- NOTE -->
+                                <li><a href="ContactUs.aspx">Contact</a></li> <!-- NOTE -->
                             </ul>
                         </div>
                     </div>
