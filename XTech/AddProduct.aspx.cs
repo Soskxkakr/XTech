@@ -14,7 +14,8 @@ namespace XTech
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["uType"] == null || !Session["uType"].Equals("Admin"))
+                Response.Redirect("Login.aspx");
         }
         
         protected void btnRegister_Click(object sender, EventArgs e)
@@ -41,6 +42,7 @@ namespace XTech
                     cmd1.Parameters.AddWithValue("@price", Convert.ToInt32(price.Text));
                     cmd1.ExecuteNonQuery();
                     Response.Write("<script type=\text/javascript\">alert('Product has been added! ');</script>");
+                    lblMessage.Text = "Product Added Successfully";
                 }
             }
             catch (Exception ex)

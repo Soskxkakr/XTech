@@ -44,10 +44,11 @@ namespace XTech
             Response.Redirect("ForgotPassword.aspx");
         }
 
-        protected void btnReset_Click(object sender, EventArgs e)
+        protected void btnRegister_Click(object sender, EventArgs e)
         {
-            txtUsername.Text = string.Empty;
-            txtPassword.Text = string.Empty;
+            RequiredFieldValidator1.Enabled = false;
+            RequiredFieldValidator1.Enabled = false;
+            Response.Redirect("Register.aspx");
         }
     }
 }

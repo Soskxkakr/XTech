@@ -20,10 +20,12 @@
                 <asp:Label ID="lblMessage" runat="server"></asp:Label>
             </td>
             <td>
-                <asp:Button ID="btnLogin" runat="server" OnClick="btnLogin_Click" Text="Login" />
-                <asp:Button ID="btnReset" runat="server" OnClick="btnReset_Click" Text="Reset" />
-                &nbsp;<asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">Forgot Password?</asp:LinkButton>
+                <asp:Button ID="btnLogin" runat="server" OnClick="btnLogin_Click" Text="Login" />    
             </td>
         </tr>
     </table>
+    <div class="text-center">
+        <a href="Register.aspx" class="primary-btn">Register</a>
+        <a href="ForgotPassword.aspx" class="primary-btn">Forgot Password?</a>
+    </div>
 </asp:Content>
