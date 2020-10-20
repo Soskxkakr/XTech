@@ -1,14 +1,13 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Layout.Master" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="XTech.Home" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-<p>>
+<p>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </p>
-<div>
 
 <div class="container">
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -26,7 +25,7 @@
       </div>
 
       <div class="item">
-        <img src="3" style="width:100%;">
+        <img src="#" style="width:100%;">
       </div>
     
       <div class="item">
@@ -45,6 +44,15 @@
     </a>
   </div>
 </div>
-
-</div>     
+    <section class="product spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-7">
+                    <div class="row">
+                        <% =SetItems() %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </asp:Content>

@@ -39,18 +39,21 @@
                 </ul>
             </div>
             <div class="humberger__menu__widget">
-                <div class="header__top__right__language">
-                    <img src="img/language.png" alt="">
-                    <div>English</div>
-                    <span class="arrow_carrot-down"></span>
-                    <ul>
-                        <li><a href="#">Spanis</a></li>
-                        <li><a href="#">English</a></li>
-                    </ul>
-                </div>
-                <div class="header__top__right__auth">
-                    <a href="#"><i class="fa fa-user"></i> Login</a>
-                </div>
+                <div class="header__top__right__language"> 
+                    <%
+                        if (Check_User().Equals("My Account"))
+                        {%>
+                            <i class="fa fa-user"></i><div class="ml-1"><a href="#" style="color:black">My Account</a></div>
+                            <ul>
+                                <li><a class="nav-link" href="#" runat="server" onserverclick="Logout_Click">Logout</a></li>
+                            </ul>
+                            <%}
+                        else
+                        {%>
+                            <i class="fa fa-user"></i><div class="ml-1"><a href="Login.aspx" style="color:black">Login</a></div>
+                        <%}
+                    %>
+              </div>
             </div>
             <nav class="humberger__menu__nav mobile-menu">
                 <ul>
@@ -70,10 +73,10 @@
             </nav>
             <div id="mobile-menu-wrap"></div>
             <div class="header__top__right__social">
-                <a href="#"><i class="fa fa-facebook"></i></a>
-                <a href="#"><i class="fa fa-twitter"></i></a>
-                <a href="#"><i class="fa fa-linkedin"></i></a>
-                <a href="#"><i class="fa fa-pinterest-p"></i></a>
+                <a href="https://www.facebook.com"><i class="fa fa-facebook"></i></a>
+                <a href="https://www.twitter.com"><i class="fa fa-twitter"></i></a>
+                <a href="https://linkedin.com"><i class="fa fa-linkedin"></i></a>
+                <a href="https://pinterest.com"><i class="fa fa-pinterest-p"></i></a>
             </div>
             <div class="humberger__menu__contact">
                 <ul>
@@ -104,15 +107,6 @@
                                     <a href="#"><i class="fa fa-linkedin"></i></a>
                                     <a href="#"><i class="fa fa-pinterest-p"></i></a>
                                 </div>
-                                <div class="header__top__right__language">
-                                    <img src="img/language.png" alt="">
-                                    <div>English</div>
-                                    <span class="arrow_carrot-down"></span>
-                                    <ul>
-                                        <li><a href="#">Spanis</a></li>
-                                        <li><a href="#">English</a></li>
-                                    </ul>
-                                </div>
                                 <div class="header__top__right__language"> 
                                     <%
                                         if (Check_User().Equals("My Account"))
@@ -128,9 +122,6 @@
                                         <%}
                                     %>
                                 </div>
-                                <!-- <div class="header__top__right__auth row">
-                                    <a href="Register.aspx"><i class="fa fa-user"></i>Login</a>
-                                </div> -->
                             </div>
                         </div>
                     </div>
@@ -204,20 +195,8 @@
                         <div class="footer__widget">
                             <h6>Useful Links</h6>
                             <ul>
-                                <li><a href="#">About Us</a></li>
-                                <li><a href="#">About Our Shop</a></li>
-                                <li><a href="#">Secure Shopping</a></li>
-                                <li><a href="#">Delivery infomation</a></li>
-                                <li><a href="#">Privacy Policy</a></li>
-                                <li><a href="#">Our Sitemap</a></li>
-                            </ul>
-                            <ul>
-                                <li><a href="#">Who We Are</a></li>
-                                <li><a href="#">Our Services</a></li>
-                                <li><a href="#">Projects</a></li>
-                                <li><a href="#">Contact</a></li>
-                                <li><a href="#">Innovation</a></li>
-                                <li><a href="#">Testimonials</a></li>
+                                <li><a href="#">About Us</a></li> <!-- NOTE -->
+                                <li><a href="#">Contact</a></li> <!-- NOTE -->
                             </ul>
                         </div>
                     </div>
@@ -230,10 +209,10 @@
                                 <button type="submit" class="site-btn">Subscribe</button>
                             </form>
                             <div class="footer__widget__social">
-                                <a href="#"><i class="fa fa-facebook"></i></a>
-                                <a href="#"><i class="fa fa-instagram"></i></a>
-                                <a href="#"><i class="fa fa-twitter"></i></a>
-                                <a href="#"><i class="fa fa-pinterest"></i></a>
+                                <a href="https://www.facebook.com"><i class="fa fa-facebook"></i></a>
+                                <a href="https://www.instagram.com"><i class="fa fa-instagram"></i></a>
+                                <a href="https://www.twitter.com"><i class="fa fa-twitter"></i></a>
+                                <a href="https://www.pinterest.com"><i class="fa fa-pinterest"></i></a>
                             </div>
                         </div>
                     </div>
@@ -242,7 +221,7 @@
                     <div class="col-lg-12">
                         <div class="footer__copyright">
                             <div class="footer__copyright__text">
-                                <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved</p>
+                                <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved to Xtech</p>
                             </div>
                             <div class="footer__copyright__payment"><img src="img/payment-item.png" alt=""></div>
                         </div>
