@@ -42,7 +42,9 @@ namespace XTech
                     "   <td class='align-middle'>" + name + "</td>" +
                     "   <td class='align-middle'>" + category + "</td>" +
                     "   <td class='align-middle'>RM " + price + "</td>" +
-                    "   <td><img src='img/product/" + image + "'class='product__details__pic__items--small' /></td>" +
+                    "   <td>" +
+                    "       <a href='ProductDetails.aspx?id=" + id + "'><img src='img/product/" + image + "'class='product__details__pic__items--small' ></a>" +
+                    "   </td>" +
                     "</tr>";
             }
             con.Close();

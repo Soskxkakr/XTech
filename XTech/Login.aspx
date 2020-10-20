@@ -25,7 +25,7 @@
         </tr>
     </table>
     <div class="text-center">
-        <a href="Register.aspx" class="primary-btn">Register</a>
+        <a href="SignUp.aspx" class="primary-btn">Register</a>
         <a href="ForgotPassword.aspx" class="primary-btn">Forgot Password?</a>
     </div>
 </asp:Content>

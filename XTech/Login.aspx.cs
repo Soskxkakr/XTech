@@ -11,7 +11,6 @@ namespace XTech
 {
     public partial class Login : System.Web.UI.Page
     {
-        private User currentUser = new User();
         protected void Page_Load(object sender, EventArgs e)
         {
 

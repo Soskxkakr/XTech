@@ -57,18 +57,15 @@
             </div>
             <nav class="humberger__menu__nav mobile-menu">
                 <ul>
-                    <li class="active"><a href="./index.html">Home</a></li>
+                    <li class="active"><a href="Home.aspx">Home</a></li>
                     <li><a href="./shop-grid.html">Shop</a></li>
                     <li><a href="#">Pages</a>
                         <ul class="header__menu__dropdown">
-                            <li><a href="./shop-details.html">Shop Details</a></li>
-                            <li><a href="./shoping-cart.html">Shoping Cart</a></li>
-                            <li><a href="./checkout.html">Check Out</a></li>
-                            <li><a href="./blog-details.html">Blog Details</a></li>
+                            <li><a href="Shop.aspx">Shop</a></li>
+                            <li><a href="AboutUs.aspx">About Us</a></li>
                         </ul>
                     </li>
-                    <li><a href="./blog.html">Blog</a></li>
-                    <li><a href="./contact.html">Contact</a></li>
+                    <li><a href="ContactUs.aspx">Contact Us</a></li>
                 </ul>
             </nav>
             <div id="mobile-menu-wrap"></div>
@@ -102,10 +99,10 @@
                         <div class="col-lg-6 col-md-6">
                             <div class="header__top__right">
                                 <div class="header__top__right__social">
-                                    <a href="#"><i class="fa fa-facebook"></i></a>
-                                    <a href="#"><i class="fa fa-twitter"></i></a>
-                                    <a href="#"><i class="fa fa-linkedin"></i></a>
-                                    <a href="#"><i class="fa fa-pinterest-p"></i></a>
+                                    <a href="https://www.facebook.com"><i class="fa fa-facebook"></i></a>
+                                    <a href="https://www.twitter.com"><i class="fa fa-twitter"></i></a>
+                                    <a href="https://www.linkedin.com"><i class="fa fa-linkedin"></i></a>
+                                    <a href="https://www.pinterest.com"><i class="fa fa-pinterest-p"></i></a>
                                 </div>
                                 <div class="header__top__right__language"> 
                                     <%
@@ -113,6 +110,10 @@
                                         {%>
                                             <i class="fa fa-user"></i><div class="ml-1"><a href="#" style="color:black">My Account</a></div>
                                             <ul>
+                                                <li><a class="nav-link" href="Register.aspx" runat="server">Add User</a></li>
+                                                <li><a class="nav-link" href="ViewAll.aspx" runat="server">View all Users</a></li>
+                                                <li><a class="nav-link" href="AddProduct.aspx" runat="server">Add Product</a></li>
+                                                <li><a class="nav-link" href="ViewAllProduct.aspx" runat="server">View all Products</a></li>
                                                 <li><a class="nav-link" href="#" runat="server" onserverclick="Logout_Click">Logout</a></li>
                                             </ul>
                                          <%}
@@ -134,27 +135,26 @@
                             <a href="Home.aspx"><img src="img/xtech.png" width="130" height="60" alt=""></a>
                         </div>
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col-lg-7">
                         <nav class="header__menu">
                             <ul>
                                 <li><a href="Home.aspx">Home</a></li>
                                 <li><a href="Shop.aspx">Shop</a></li>
-                                <li><a href="#">Pages</a>
-                                    <ul class="header__menu__dropdown">
+                                <li><a href="SearchProduct.aspx">Search Product</a></li>
+                                <!-- <li><a href="#">Pages</a>
+                                     <ul class="header__menu__dropdown">
                                         <li><a href="./shop-details.html">Shop Details</a></li>
-                                        <li><a href="./shoping-cart.html">Shoping Cart</a></li>
-                                        <li><a href="./checkout.html">Check Out</a></li>
                                         <li><a href="./blog-details.html">Blog Details</a></li>
                                         <li class="nav-item"><a class="nav-link" href="AddProduct.aspx">Add Product</a></li>
                                         <li class="nav-item"><a class="nav-link" href="SearchProduct.aspx">Search Product</a></li>
                                     </ul>
-                                </li>
-                                <li><a href="./blog.html">Blog</a></li>
-                                <li><a href="./contact.html">Contact</a></li>
+                                </li> -->
+                                <li><a href="AboutUs.aspx">About</a></li>
+                                <li><a href="ContactUs.aspx">Contact</a></li>
                             </ul>
                         </nav>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col-lg-2">
                         <div class="header__cart">
                             <ul>
                                 <li><a href="ShopCart.aspx"><i class="fa fa-shopping-bag"></i><asp:Label runat="server" ID="lblCartQty"></asp:Label></a></li>
@@ -175,46 +175,58 @@
             </asp:ContentPlaceHolder>
         </div>
         <!-- Footer -->
-        <footer class="footer spad">
+        <footer class="footer pt-0">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="footer__about">
                             <div class="footer__about__logo">
-                                <a href="Home.aspx"><img src="" alt=""></a>
+                                <!-- None -->
                             </div>
-                            <ul>
+                            <ul class="mb-0">
                                 <li>Address: Jalan Teknologi 5,<br />Taman Teknologi Malaysia,<br /> 57000 Kuala Lumpur,<br /> Wilayah Persekutuan Kuala Lumpur.</li>
                                 <li>Phone: +65 11.188.888</li>
                                 <li>Email: Xtech@mail.com</li>
                             </ul>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6 offset-lg-1">
+                    <div class="col-lg-3 col-md-6 col-sm-6 offset-lg-1">
                         <div class="footer__widget">
-                            <h6>Useful Links</h6>
+                            <div class="footer__about__logo">
+                                <!-- None -->
+                            </div>
                             <ul>
+                                <li><h6>Useful Links</h6></li>
                                 <li><a href="AboutUs.aspx">About Us</a></li> <!-- NOTE -->
                                 <li><a href="ContactUs.aspx">Contact</a></li> <!-- NOTE -->
                             </ul>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6">
+                    <div class="col-lg-5 col-md-6">
                         <div class="footer__widget">
-                            <h6>Join Our Newsletter Now</h6>
-                            <p>Get E-mail updates about our latest shop and special offers.</p>
-                            <form action="#">
-                                <p class="mb-0">Enter your email</p>
-                                <asp:TextBox ID="txtEmailSub" runat="server" TextMode="Email" />
-                                <asp:Button ID="btnSubscribe" runat="server" Text="Subscribe" CssClass="site-btn" OnClick="btnSubscribe_Click" />
-                                <asp:Label ID="lblMessage" runat="server" Text="" />
-                            </form>
-                            <div class="footer__widget__social mt-2">
-                                <a href="https://www.facebook.com"><i class="fa fa-facebook"></i></a>
-                                <a href="https://www.instagram.com"><i class="fa fa-instagram"></i></a>
-                                <a href="https://www.twitter.com"><i class="fa fa-twitter"></i></a>
-                                <a href="https://www.pinterest.com"><i class="fa fa-pinterest"></i></a>
+                            <div class="footer__about__logo">
+                                <!-- None -->
                             </div>
+                            <ul>
+                                <li><h6>Join Our Newsletter Now</h6></li>
+                                <li><p>Get E-mail updates about our latest shop and special offers.</p></li>
+                                <li><p class="mb-0">Enter your email</p></li>
+                                <li class="d-flex">
+                                <form action="#">
+                                    <asp:TextBox ID="txtEmailSub" runat="server" TextMode="Email" />
+                                    <asp:Button ID="btnSubscribe" runat="server" Text="Subscribe" CssClass="site-btn ml-2" OnClick="btnSubscribe_Click" />
+                                    <asp:Label ID="lblMessage" runat="server" Text="" />
+                                </form>
+                                </li>
+                                <li>                            
+                                    <div class="footer__widget__social mt-2">
+                                        <a href="https://www.facebook.com"><i class="fa fa-facebook"></i></a>
+                                        <a href="https://www.instagram.com"><i class="fa fa-instagram"></i></a>
+                                        <a href="https://www.twitter.com"><i class="fa fa-twitter"></i></a>
+                                        <a href="https://www.pinterest.com"><i class="fa fa-pinterest"></i></a>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>

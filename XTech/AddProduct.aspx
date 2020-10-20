@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Layout.Master" AutoEventWireup="true" CodeBehind="AddProduct.aspx.cs" Inherits="XTech.AddProduct" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <h2 class="text-center">Register</h2>
+    <h2 class="text-center">Add Product</h2>
     <div class="row">
         <form id="frmUpload" name="frmUpload" method="post">
             <table class="col-lg-6 table table-bordered table-striped mx-auto w-auto">

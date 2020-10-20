@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Layout.Master" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="XTech.Register" UnobtrusiveValidationMode="none" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <h2 class="text-center">Register</h2>
+    <h2 class="text-center">Add User</h2>
     <div class="row">
         <table class="col-lg-6 table table-bordered table-striped mx-auto w-auto">
             <tr>
@@ -35,7 +35,7 @@
             <tr>
                 <td style="width: 359px">Gender:</td>
                 <td>
-                    <asp:RadioButtonList ID="rdbGender" runat="server">
+                    <asp:RadioButtonList ID="rdbGender" runat="server" RepeatDirection="Horizontal">
                         <asp:ListItem>Female</asp:ListItem>
                         <asp:ListItem>Male</asp:ListItem>
                     </asp:RadioButtonList>
