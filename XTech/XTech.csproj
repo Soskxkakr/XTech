@@ -111,8 +111,6 @@
     <Content Include="img\categories\cat-3.jpg" />
     <Content Include="img\categories\cat-4.jpg" />
     <Content Include="img\categories\cat-5.jpg" />
-    <Content Include="img\contact.png" />
-    <Content Include="img\double-tail-spin.svg" />
     <Content Include="img\featured\feature-1.jpg" />
     <Content Include="img\featured\feature-2.jpg" />
     <Content Include="img\featured\feature-3.jpg" />
@@ -127,7 +125,6 @@
     <Content Include="img\latest-product\lp-2.jpg" />
     <Content Include="img\latest-product\lp-3.jpg" />
     <Content Include="img\payment-item.png" />
-    <Content Include="img\products.png" />
     <Content Include="img\product\details\product-details-1.jpg" />
     <Content Include="img\product\details\product-details-2.jpg" />
     <Content Include="img\product\details\product-details-3.jpg" />
@@ -155,7 +152,6 @@
     <Content Include="img\product\product-7.jpg" />
     <Content Include="img\product\product-8.jpg" />
     <Content Include="img\product\product-9.jpg" />
-    <Content Include="img\welcome.png" />
     <Content Include="img\x.png" />
     <Content Include="img\xtech.png" />
     <Content Include="js\bootstrap.js" />
@@ -166,7 +162,6 @@
     <Content Include="js\jquery.nice-select.js" />
     <Content Include="js\jquery.nice-select.min.js" />
     <Content Include="js\jquery.slicknav.js" />
-    <Content Include="js\jssor.slider-28.0.0.min.js" />
     <Content Include="js\main.js" />
     <Content Include="js\mixitup.min.js" />
     <Content Include="js\owl.carousel.js" />
