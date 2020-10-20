@@ -305,7 +305,6 @@
     <Compile Include="Test.aspx.designer.cs">
       <DependentUpon>Test.aspx</DependentUpon>
     </Compile>
-    <Compile Include="User.cs" />
     <Compile Include="ViewAll.aspx.cs">
       <DependentUpon>ViewAll.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
