@@ -51,6 +51,9 @@
                         else
                         {%>
                             <i class="fa fa-user"></i><div class="ml-1"><a href="Login.aspx" style="color:black">Login</a></div>
+                             <ul>
+                                <li><a class="nav-link" href="#" runat="server" onserverclick="Logout_Click">Logout</a></li>
+                            </ul>
                         <%}
                     %>
               </div>

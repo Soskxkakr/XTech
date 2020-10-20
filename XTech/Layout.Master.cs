@@ -26,7 +26,6 @@ namespace XTech
         }
         protected void Logout_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Debug.WriteLine("Hello World");
             Session.Abandon();
             Response.Redirect("Login.aspx");
         }
@@ -52,12 +51,15 @@ namespace XTech
                 return htmlstr;
             }
             else if (key != null && key.Equals("Customer"))
-            { 
+            {
                 htmlstr +=
                     "<i class='fa fa-user'></i>" +
                     "<div class='ml-1'>" +
                     "   <a href='#' style='color:black'>My Account</a>" +
-                    "</div>";
+                    "</div>" +
+                    "<ul>" +
+                    "   <li><a class='nav-link' href='Login.aspx' runat='server'>Logout</a></li>" +
+                    "</ul>";
                 return htmlstr;
             }
             else

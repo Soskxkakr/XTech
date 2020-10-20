@@ -46,4 +46,7 @@
             </td>
         </tr>
     </table>
+    <p class="text-center">
+        <asp:HyperLink ID="HyperLink1" NavigateUrl="~/ViewAll.aspx" CssClass="primary-btn" runat="server">Go back</asp:HyperLink>
+    </p>
 </asp:Content>
