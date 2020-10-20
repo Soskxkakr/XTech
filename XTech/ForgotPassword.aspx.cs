@@ -48,7 +48,6 @@ namespace XTech
                 msg.Subject = "Recover your Password";
                 msg.Body = ("Your Username: " + username + "<br/>" + "Your Password: " + password);
                 msg.IsBodyHtml = true;
-
                 SmtpClient smt = new SmtpClient();
                 smt.Host = "smtp.gmail.com";
                 System.Net.NetworkCredential ntwd = new NetworkCredential();
@@ -61,6 +60,11 @@ namespace XTech
                 smt.Send(msg);
                 lblMessage.ForeColor = System.Drawing.Color.ForestGreen;
                 lblMessage.Text = "Username and Password Sent Successfully";
+            }
+            else
+            {
+                lblMessage.ForeColor = System.Drawing.Color.Red;
+                lblMessage.Text = "This email does not exist in our database";
             }
         }
     }

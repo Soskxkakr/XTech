@@ -159,7 +159,6 @@
                             <ul>
                                 <li><a href="ShopCart.aspx"><i class="fa fa-shopping-bag"></i><asp:Label runat="server" ID="lblCartQty"></asp:Label></a></li>
                             </ul>
-                            <div class="header__cart__price">item: <span>$150.00</span></div>
                         </div>
                     </div>
                 </div>
@@ -200,15 +199,17 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-12">
+                    <div class="col-lg-4 col-md-6">
                         <div class="footer__widget">
                             <h6>Join Our Newsletter Now</h6>
                             <p>Get E-mail updates about our latest shop and special offers.</p>
                             <form action="#">
-                                <input type="text" placeholder="Enter your mail">
-                                <button type="submit" class="site-btn">Subscribe</button>
+                                <p class="mb-0">Enter your email</p>
+                                <asp:TextBox ID="txtEmailSub" runat="server" TextMode="Email" />
+                                <asp:Button ID="btnSubscribe" runat="server" Text="Subscribe" CssClass="site-btn" OnClick="btnSubscribe_Click" />
+                                <asp:Label ID="lblMessage" runat="server" Text="" />
                             </form>
-                            <div class="footer__widget__social">
+                            <div class="footer__widget__social mt-2">
                                 <a href="https://www.facebook.com"><i class="fa fa-facebook"></i></a>
                                 <a href="https://www.instagram.com"><i class="fa fa-instagram"></i></a>
                                 <a href="https://www.twitter.com"><i class="fa fa-twitter"></i></a>
