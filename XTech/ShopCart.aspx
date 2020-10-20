@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <p class="text-center h1">My Cart</p>      
     <div class="col-lg-12 mt-4">
-        <table class="table table-borderless table-secondary mx-auto w-auto">
+        <table id="cartTable" class="table table-borderless table-secondary mx-auto w-auto">
             <% =SetUpTable() %>
         </table>
 
@@ -13,4 +13,12 @@
             <%  }%>
         </div>
     </div>
+    <div class="d-flex justify-content-center">
+        <asp:Label runat="server" CssClass="align h1 m-1" ForeColor="Green" ID="checkOutMessage" />
+    </div>
+    <script>
+        function row(num) {
+            document.getElementById("cartTable").deleteRow(num);
+        }
+    </script>
 </asp:Content>

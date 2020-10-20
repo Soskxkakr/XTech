@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Layout.Master" AutoEventWireup="true" CodeBehind="ForgotPassword.aspx.cs" Inherits="XTech.ForgotPassword" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <h2 class="text-center m">Forgot Password</h2>
-    <table class="col-lg-6 table table-bordered table-striped mx-auto w-auto">
+    <table id="tableCart" class="col-lg-6 table table-bordered table-striped mx-auto w-auto">
         <tr>
             <td style="width: 225px">Email:</td>
             <td>

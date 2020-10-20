@@ -20,7 +20,21 @@ namespace XTech
         
         protected void btnCheckout_Click(object sender, EventArgs e)
         {
-            // Save cart to database
+            if (Session["uType"] != null)
+            {
+                checkOutMessage.Text = "Checkout Successfully!";
+                // Save cart to database
+            }
+            else
+            {
+                Response.Redirect("Login.aspx");
+            }
+
+        }
+
+        protected void btnRemove_Click(object sender, EventArgs e)
+        {
+            // Remove the product from the list
         }
 
         protected string SetUpTable()
@@ -35,8 +49,11 @@ namespace XTech
                     htmlstr += 
                         "<tr>" +
                         "   <td width='350px'><img class='product__details__pic__items--medium' src='img/product/" + prod.ImageFile + "'></td>" +
-                        "   <td class='h2'>" + prod.Name + "<br/>" +
+                        "   <td class='h2 align-middle'>" + prod.Name + "<br/>" +
                         "               RM " + prod.Price +
+                        "   </td>" +
+                        "   <td class='align-middle' width='150px'>" +
+                        "       <button id='btnRemove' runat='server' class='btn-danger' ondblclick='row(" + prod.Id + ")'>Remove</button>" +
                         "   </td>" +
                         "</tr>";
                 }

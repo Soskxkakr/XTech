@@ -19,7 +19,7 @@ namespace XTech
             id = Convert.ToInt16(Request.QueryString["id"]);
             if (!IsPostBack)
             {
-                SqlDataAdapter da = new SqlDataAdapter("select * from Users where id= '" + id + "'", con);
+                SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM Users WHERE id= '" + id + "'", con);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 txtUsername.Text = dt.Rows[0][1].ToString();
@@ -34,7 +34,7 @@ namespace XTech
         protected void btnEdit_Click1(object sender, EventArgs e)
         {
             con.Open();
-            string query = "update Users set username ='" + txtUsername.Text + "',password ='" + txtPassword.Text + "'," + "email ='" + txtEmail.Text + "',gender='" + rdbGender.SelectedItem + "',country ='" + ddlcountry.SelectedItem + "' where id = '" + id + "'";
+            string query = "UPDATE Users SET username ='" + txtUsername.Text + "',password ='" + txtPassword.Text + "'," + "email ='" + txtEmail.Text + "',gender='" + rdbGender.SelectedItem + "',country ='" + ddlcountry.SelectedItem + "' where id = '" + id + "'";
 
             SqlCommand cmd = new SqlCommand(query, con);
             cmd.ExecuteNonQuery();
@@ -45,7 +45,7 @@ namespace XTech
         protected void btnDelete_Click1(object sender, EventArgs e)
         {
             con.Open();
-            string query = "delete from Users where id ='" + id + "'";
+            string query = "DELETE FROM Users WHERE id ='" + id + "'";
             SqlCommand cmd = new SqlCommand(query, con);
             cmd.ExecuteNonQuery();
             con.Close();
