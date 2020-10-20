@@ -22,10 +22,7 @@ namespace XTech
                 txtPassword.Text != "" && 
                 txtPassword.Text.Length > 8 && 
                 txtPassword.Text.Length < 16 &&
-                txtEmail.Text != "" &&
-                rdbGender.SelectedIndex != -1 &&
-                ddlcountry.SelectedIndex != 0 &&
-                ddlUserType.SelectedIndex != 0)
+                txtEmail.Text != "")
             {
                 SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
                 try
@@ -64,7 +61,7 @@ namespace XTech
                 txtUsername.Text = "";
                 txtPassword.Text = "";
                 txtEmail.Text = "";
-                rdbGender.SelectedIndex = -1;
+                rdbGender.SelectedIndex = 1;
                 ddlcountry.SelectedIndex = 0;
                 ddlUserType.SelectedIndex = 0;
             }

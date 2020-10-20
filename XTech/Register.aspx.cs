@@ -58,11 +58,13 @@ namespace XTech
                         Response.Write("<script type=\text/javascript\">alert('Customer Added! ');</script>");
                         lblMessage.ForeColor = System.Drawing.Color.Green;
                         lblMessage.Text = "Successfully Added!";
+                        con.Close();
                     }
                 }
                 catch (Exception ex)
                 {
                     Response.Write("Error: " + ex.ToString());
+                    con.Close();
                 }
             }
             else
