@@ -26,16 +26,49 @@ namespace XTech
         }
         protected void Logout_Click(object sender, EventArgs e)
         {
+            System.Diagnostics.Debug.WriteLine("Hello World");
             Session.Abandon();
             Response.Redirect("Login.aspx");
         }
 
-        protected string Check_User()
+        public string Check_User()
         {
-            if (Session["uType"] == null)
-                return "Login";
+            string htmlstr = "";
+            string key = (string) Session["uType"];
+            if (key != null && key.Equals("Admin"))
+            {
+                htmlstr +=
+                    "<i class='fa fa-user'></i>" +
+                    "<div class='ml-1'>" +
+                    "   <a href='#' style='color:black'>My Account</a>" +
+                    "</div>" +
+                    "<ul>" +
+                    "   <li><a class='nav-link' href='Register.aspx' runat='server'>Add User</a></li>" +
+                    "   <li><a class='nav-link' href='ViewAll.aspx' runat='server'>View All Users</a></li>" +
+                    "   <li><a class='nav-link' href='AddProduct.aspx' runat='server'>Add Product</a></li>" +
+                    "   <li><a class='nav-link' href='ViewAllProduct.aspx' runat='server'>View All Products</a></li>" +
+                    "   <li><a class='nav-link' href='Login.aspx' runat='server'>Logout</a></li>" +
+                    "</ul>";
+                return htmlstr;
+            }
+            else if (key != null && key.Equals("Customer"))
+            { 
+                htmlstr +=
+                    "<i class='fa fa-user'></i>" +
+                    "<div class='ml-1'>" +
+                    "   <a href='#' style='color:black'>My Account</a>" +
+                    "</div>";
+                return htmlstr;
+            }
             else
-                return "My Account";
+            { 
+                htmlstr +=
+                    "<i class='fa fa-user'></i>" +
+                    "<div class='ml-1'>" +
+                    "   <a href='Login.aspx' style='color:black'>Login</a>" +
+                    "</div>"; 
+                return htmlstr;
+            }
         }
 
         protected void btnSubscribe_Click(object sender, EventArgs e)

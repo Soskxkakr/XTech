@@ -11,9 +11,18 @@ namespace XTech
 {
     public partial class Login : System.Web.UI.Page
     {
+        protected void Page_Init(object sender, EventArgs e)
+        {
+
+        }
         protected void Page_Load(object sender, EventArgs e)
         {
 
+        }
+
+        protected override void OnPreRender(EventArgs e)
+        {
+            Session.Abandon();
         }
 
         protected void btnLogin_Click(object sender, EventArgs e)

@@ -105,23 +105,7 @@
                                     <a href="https://www.pinterest.com"><i class="fa fa-pinterest-p"></i></a>
                                 </div>
                                 <div class="header__top__right__language"> 
-                                    <%
-                                        if (Check_User().Equals("My Account"))
-                                        {%>
-                                            <i class="fa fa-user"></i><div class="ml-1"><a href="#" style="color:black">My Account</a></div>
-                                            <ul>
-                                                <li><a class="nav-link" href="Register.aspx" runat="server">Add User</a></li>
-                                                <li><a class="nav-link" href="ViewAll.aspx" runat="server">View all Users</a></li>
-                                                <li><a class="nav-link" href="AddProduct.aspx" runat="server">Add Product</a></li>
-                                                <li><a class="nav-link" href="ViewAllProduct.aspx" runat="server">View all Products</a></li>
-                                                <li><a class="nav-link" href="#" runat="server" onserverclick="Logout_Click">Logout</a></li>
-                                            </ul>
-                                         <%}
-                                        else
-                                        {%>
-                                            <i class="fa fa-user"></i><div class="ml-1"><a href="Login.aspx" style="color:black">Login</a></div>
-                                        <%}
-                                    %>
+                                    <% =Check_User() %>
                                 </div>
                             </div>
                         </div>
@@ -154,7 +138,7 @@
                             </ul>
                         </nav>
                     </div>
-                    <div class="col-lg-2">
+                    <div class="col-lg-1">
                         <div class="header__cart">
                             <ul>
                                 <li><a href="ShopCart.aspx"><i class="fa fa-shopping-bag"></i><asp:Label runat="server" ID="lblCartQty"></asp:Label></a></li>
