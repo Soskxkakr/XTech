@@ -52,4 +52,7 @@
             </table>
         </form>
     </div>
+    <p class="text-center">
+        <asp:HyperLink ID="HyperLink1" NavigateUrl="~/ViewAllProduct.aspx" CssClass="primary-btn" runat="server">Go back</asp:HyperLink>
+    </p>
 </asp:Content>
