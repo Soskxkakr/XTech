@@ -152,6 +152,7 @@
     <Content Include="img\product\product-7.jpg" />
     <Content Include="img\product\product-8.jpg" />
     <Content Include="img\product\product-9.jpg" />
+    <Content Include="img\slider1.jpg" />
     <Content Include="img\x.png" />
     <Content Include="img\xtech.png" />
     <Content Include="js\bootstrap.js" />
