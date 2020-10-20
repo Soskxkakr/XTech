@@ -67,12 +67,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AboutUs.aspx" />
     <Content Include="AddProduct.aspx" />
     <Content Include="App_Data\XTechDB.mdf" />
     <Content Include="App_Data\XTechDB_log.ldf">
       <DependentUpon>XTechDB.mdf</DependentUpon>
     </Content>
     <Content Include="bg_pics\Registerbg.jpg" />
+    <Content Include="ContactUs.aspx" />
     <Content Include="css\bootstrap-grid.css" />
     <Content Include="css\bootstrap.css" />
     <Content Include="css\elegant-icons.css" />
@@ -181,6 +183,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AboutUs.aspx.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AboutUs.aspx.designer.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AddProduct.aspx.cs">
       <DependentUpon>AddProduct.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -189,6 +198,13 @@
       <DependentUpon>AddProduct.aspx</DependentUpon>
     </Compile>
     <Compile Include="Cart.cs" />
+    <Compile Include="ContactUs.aspx.cs">
+      <DependentUpon>ContactUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ContactUs.aspx.designer.cs">
+      <DependentUpon>ContactUs.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Edit.aspx.cs">
       <DependentUpon>Edit.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
