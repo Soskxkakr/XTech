@@ -29,6 +29,7 @@
             </table>
         </asp:Panel>
     </div>
+    <br />
     <p class ="text-center">
         <asp:HyperLink ID="HomeHL7" NavigateUrl="~/Home.aspx" CssClass="primary-btn" runat="server">Go back</asp:HyperLink>
     </p>

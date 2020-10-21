@@ -45,7 +45,7 @@
                         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Products]"></asp:SqlDataSource>
                     </td>
                     <td>
-                        <asp:Button ID="btnRegister" runat="server" OnClick="btnRegister_Click" Text="Register" />
+                        <asp:Button ID="btnRegister" runat="server" OnClick="btnRegister_Click" Text="Add Product" />
                         <asp:Label ID="lblMessage" runat="server" ForeColor="#00CC00"></asp:Label>
                     </td>
                 </tr>

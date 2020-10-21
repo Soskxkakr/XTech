@@ -11,7 +11,7 @@
         <div class="row justify-content-center text-center">
             <div class="column">
                 <div class="card">
-                    <img src="img/Ahmed_Profile_Pic.jpeg" alt="Ahmed" width="100px" height="100px" class="centered"/>
+                    <img src="img/Ahmed_Profile_Pic.jpg" alt="Ahmed" width="100px" height="100px" class="centered"/>
                     <div class="container">
                         <h2>Ahmed Al-Omari</h2>
                         <p class="title">CEO & Founder</p>
@@ -33,7 +33,7 @@
             </div>
             <div class="column">
                 <div class="card">
-                    <img src="img/Ahmed_Profile_Pic.jpg" alt="Ahmed" width="100px" height="100px" class="centered" />
+                    <img src="img/jiet.jpg" alt="Ahmed" width="100px" height="100px" class="centered" />
                     <div class="container">
                         <h2>Neik Ji Jiet</h2>
                         <p class="title">Designer</p>

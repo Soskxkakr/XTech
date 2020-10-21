@@ -44,6 +44,7 @@ namespace XTech
                     "<ul>" +
                     "   <li><a class='nav-link' href='Register.aspx' runat='server'>Add User</a></li>" +
                     "   <li><a class='nav-link' href='ViewAll.aspx' runat='server'>View All Users</a></li>" +
+                    "   <li><a class='nav-link' href='Search.aspx' runat='server'>Search Users</a></li>" +
                     "   <li><a class='nav-link' href='AddProduct.aspx' runat='server'>Add Product</a></li>" +
                     "   <li><a class='nav-link' href='ViewAllProduct.aspx' runat='server'>View All Products</a></li>" +
                     "   <li><a class='nav-link' href='Login.aspx' runat='server'>Logout</a></li>" +

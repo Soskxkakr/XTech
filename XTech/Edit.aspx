@@ -41,7 +41,7 @@
                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Users]"></asp:SqlDataSource>
             </td>
             <td>
-                <asp:Button ID="btnEdit" runat="server" OnClick="btnEdit_Click1" Text="Edit" />
+                <asp:Button ID="btnEdit" runat="server" OnClick="btnEdit_Click1" Text="Confirm" />
                 <asp:Button ID="btnDelete" runat="server" OnClick="btnDelete_Click1" Text="Delete" />
             </td>
         </tr>

@@ -21,17 +21,17 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
       <div class="item active">
-        <img src="img/slider1.jpg" style="width:100%;">
+        <img src="img/Slider.jpg" style="width:100%;">
       </div>
 
       <div class="item">
-        <img src="#" style="width:100%;">
+        <img src="img/Slider7.jpg" style="width:100%;">
       </div>
     
-      <div class="item">
-        <img src="#" style="width:100%;">
+     <<div class="item">
+        <img src="img/Slider3.jpg" style="width:100%;">
       </div>
-    </div>
+    </div> 
 
     <!-- Left and right controls -->
     <a class="left carousel-control" href="#myCarousel" data-slide="prev">
