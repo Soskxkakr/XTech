@@ -33,7 +33,15 @@ namespace XTech
                 string gender = reader.GetString(4);
                 string country = reader.GetString(5);
                 string userType = reader.GetString(6);
-                htmlStr += "<tr><td>" + username + "</td><td>" + email + "</td><td>" + gender + "</td><td>" + country + "</td><td>" + userType + "</td><td><a href=Edit.aspx?id=" +id+">Edit</a></td></tr>";
+                htmlStr += 
+                    "<tr>" +
+                    "   <td>" + username + "</td>" +
+                    "   <td>" + email + "</td>" +
+                    "   <td>" + gender + "</td>" +
+                    "   <td>" + country + "</td>" +
+                    "   <td>" + userType + "</td>" +
+                    "   <td><a href=Edit.aspx?id=" +id+">Edit</a></td>" +
+                    "</tr>";
             }
             con.Close();
             return htmlStr;
