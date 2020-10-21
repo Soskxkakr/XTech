@@ -22,7 +22,7 @@
             </div>
             <div class="column">
                 <div class="card">
-                    <img src="img/Ahmed_Profile_Pic.jpeg" alt="Ahmed" width="100px" height="100px" class="centered" />
+                    <img src="img/Reinaldo_profilepic.jpg" alt="Ahmed" width="100px" height="100px" class="centered" />
                     <div class="container">
                         <h2>Reinaldo Taslim</h2>
                         <p class="title">Art Director</p>
@@ -33,7 +33,7 @@
             </div>
             <div class="column">
                 <div class="card">
-                    <img src="img/Ahmed_Profile_Pic.jpeg" alt="Ahmed" width="100px" height="100px" class="centered" />
+                    <img src="img/Ahmed_Profile_Pic.jpg" alt="Ahmed" width="100px" height="100px" class="centered" />
                     <div class="container">
                         <h2>Neik Ji Jiet</h2>
                         <p class="title">Designer</p>

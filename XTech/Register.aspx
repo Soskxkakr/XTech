@@ -86,4 +86,7 @@
             </tr>
         </table>
     </div>
+    <p class ="text-center">
+        <asp:HyperLink ID="HomeHL" NavigateUrl="~/Home.aspx" CssClass="primary-btn" runat="server">Home</asp:HyperLink>
+    </p>
 </asp:Content>

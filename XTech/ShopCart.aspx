@@ -21,4 +21,7 @@
             document.getElementById("cartTable").deleteRow(num);
         }
     </script>
+    <p class ="text-center">
+        <asp:HyperLink ID="HomeHL3" NavigateUrl="~/Shop.aspx" CssClass="primary-btn" runat="server">Go back to Shop</asp:HyperLink>
+    </p>
 </asp:Content>

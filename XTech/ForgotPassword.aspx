@@ -18,4 +18,7 @@
             </td>
         </tr>
     </table>
+    <p class ="text-center">
+        <asp:HyperLink ID="HomeHL5" NavigateUrl="~/ViewAllProduct.aspx" CssClass="primary-btn" runat="server">Go back</asp:HyperLink>
+    </p>
 </asp:Content>

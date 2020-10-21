@@ -85,4 +85,7 @@
             </tr>
         </table>
     </div>
+    <p class ="text-center">
+        <asp:HyperLink ID="HomeHL1" NavigateUrl="~/ViewAllProduct.aspx" CssClass="primary-btn" runat="server">Go back</asp:HyperLink>
+    </p>
 </asp:Content>

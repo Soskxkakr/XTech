@@ -91,8 +91,11 @@
     <Content Include="ForgotPassword.aspx" />
     <Content Include="Home.aspx" />
     <Content Include="img\Ahmed_Profile_Pic.jpeg" />
+    <Content Include="img\Ahmed_Profile_Pic.jpg" />
     <Content Include="img\banner\banner-1.jpg" />
     <Content Include="img\banner\banner-2.jpg" />
+    <Content Include="img\Beats_EP.jpg" />
+    <Content Include="img\Beats_Orange.jpg" />
     <Content Include="img\blog\blog-1.jpg" />
     <Content Include="img\blog\blog-2.jpg" />
     <Content Include="img\blog\blog-3.jpg" />
@@ -123,10 +126,12 @@
     <Content Include="img\featured\feature-7.jpg" />
     <Content Include="img\featured\feature-8.jpg" />
     <Content Include="img\hero\banner.jpg" />
+    <Content Include="img\iphone-12-pro-blue.jpg" />
     <Content Include="img\language.png" />
     <Content Include="img\latest-product\lp-1.jpg" />
     <Content Include="img\latest-product\lp-2.jpg" />
     <Content Include="img\latest-product\lp-3.jpg" />
+    <Content Include="img\Nokia.jpg" />
     <Content Include="img\payment-item.png" />
     <Content Include="img\product\details\headset-1.jpg" />
     <Content Include="img\product\details\headset-2.jpg" />
@@ -153,8 +158,11 @@
     <Content Include="img\product\discount\pd-4.jpg" />
     <Content Include="img\product\discount\pd-5.jpg" />
     <Content Include="img\product\discount\pd-6.jpg" />
+    <Content Include="img\Reinaldo_profilepic.jpg" />
     <Content Include="img\slider1.jpg" />
+    <Content Include="img\TechnicsAZ70.jpg" />
     <Content Include="img\x.png" />
+    <Content Include="img\XCD_Sony.jpg" />
     <Content Include="img\xtech.png" />
     <Content Include="js\bootstrap.js" />
     <Content Include="js\bootstrap.min.js" />
