@@ -40,35 +40,16 @@
             </div>
             <div class="humberger__menu__widget">
                 <div class="header__top__right__language"> 
-                    <%
-                        if (Check_User().Equals("My Account"))
-                        {%>
-                            <i class="fa fa-user"></i><div class="ml-1"><a href="#" style="color:black">My Account</a></div>
-                            <ul>
-                                <li><a class="nav-link" href="#" runat="server" onserverclick="Logout_Click">Logout</a></li>
-                            </ul>
-                            <%}
-                        else
-                        {%>
-                            <i class="fa fa-user"></i><div class="ml-1"><a href="Login.aspx" style="color:black">Login</a></div>
-                             <ul>
-                                <li><a class="nav-link" href="#" runat="server" onserverclick="Logout_Click">Logout</a></li>
-                            </ul>
-                        <%}
-                    %>
+                    <% =Check_User() %>
               </div>
             </div>
             <nav class="humberger__menu__nav mobile-menu">
                 <ul>
                     <li class="active"><a href="Home.aspx">Home</a></li>
-                    <li><a href="./shop-grid.html">Shop</a></li>
-                    <li><a href="#">Pages</a>
-                        <ul class="header__menu__dropdown">
-                            <li><a href="Shop.aspx">Shop</a></li>
-                            <li><a href="AboutUs.aspx">About Us</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="ContactUs.aspx">Contact Us</a></li>
+                    <li><a href="Shop.aspx">Shop</a></li>
+                    <li><a href="SearchProduct.aspx">Search Product</a></li>
+                    <li><a href="AboutUs.aspx">About</a></li>
+                    <li><a href="ContactUs.aspx">Contact</a></li>
                 </ul>
             </nav>
             <div id="mobile-menu-wrap"></div>

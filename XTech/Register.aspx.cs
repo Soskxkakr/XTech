@@ -25,14 +25,28 @@ namespace XTech
             ddlcountry.SelectedIndex = 0;
         }
 
+        // Registering a new user (can be Admin or Customer)
         protected void btnRegister_Click(object sender, EventArgs e)
         {
-            if (txtUsername.Text != "" &&
-                txtPassword.Text != "" &&
-                txtPassword.Text.Length > 8 &&
-                txtPassword.Text.Length < 16 &&
-                txtEmail.Text != "")
+            // Check whether if any of the fields are empty
+            // Gender, Country, and Usertype has its own value, it does not need to be checked
+            if (txtUsername.Text == "" ||
+                txtPassword.Text == "" ||
+                txtPassword.Text.Length < 8 ||
+                txtPassword.Text.Length > 16 ||
+                txtEmail.Text == "")
             {
+                // If one of the fields are empty, set all fields to its default state
+                txtUsername.Text = "";
+                txtPassword.Text = "";
+                txtEmail.Text = "";
+                rdbGender.SelectedIndex = 0;
+                ddlcountry.SelectedIndex = 0;
+                ddlUserType.SelectedIndex = 0;
+            }
+            else
+            {
+                // If all fields matches the requirements, execute the SQL statement
                 SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
                 try
                 {
@@ -67,19 +81,11 @@ namespace XTech
                     con.Close();
                 }
             }
-            else
-            {
-                txtUsername.Text = "";
-                txtPassword.Text = "";
-                txtEmail.Text = "";
-                rdbGender.SelectedIndex = 1;
-                ddlcountry.SelectedIndex = 0;
-                ddlUserType.SelectedIndex = 0;
-            }
         }
 
         protected void CustomValidator1_ServerValidate(object source, ServerValidateEventArgs args)
         {
+            // If password length is less than 8 or more than 16, return FALSE
             args.IsValid = (args.Value.Length < 8 || args.Value.Length > 16) ? false : true;
         }
     }

@@ -52,9 +52,6 @@ namespace XTech
                         "   <td class='h2 align-middle'>" + prod.Name + "<br/>" +
                         "               RM " + prod.Price +
                         "   </td>" +
-                        "   <td class='align-middle' width='150px'>" +
-                        "       <button id='btnRemove' runat='server' class='btn-danger' ondblclick='row(" + prod.Id + ")'>Remove</button>" +
-                        "   </td>" +
                         "</tr>";
                 }
 

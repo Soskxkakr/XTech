@@ -22,26 +22,32 @@ namespace XTech
 
         protected override void OnPreRender(EventArgs e)
         {
+            // Remove all sessions
             Session.Abandon();
         }
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
+            // Establish the connection with SQL
             SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
             con.Open();
+            // Preparing the command for SQL
             SqlCommand cmd = new SqlCommand("SELECT count(*) FROM Users WHERE username='" + txtUsername.Text + "' AND password = '" + txtPassword.Text + "'", con);
+            // Give the command to SQL and check whether the command is valid or not
             int count = Convert.ToInt32(cmd.ExecuteScalar().ToString());
 
-            if (count > 0)
+            if (count > 0) // Record Exists
             {
+                // The SQL command is VALID
                 SqlCommand cmdType = new SqlCommand("SELECT usertype FROM Users WHERE username = '" + txtUsername.Text + "'", con);
-                string uType = cmdType.ExecuteScalar().ToString().Replace(" ", "");
+                string uType = cmdType.ExecuteScalar().ToString().Replace(" ", ""); // Admin or Customer
                 Session["uType"] = uType;
 
                 Response.Redirect("Home.aspx");
             }
             else
             {
+                // If record does not exist
                 lblMessage.ForeColor = System.Drawing.Color.Red;
                 lblMessage.Text = "Login Failed!";
             }
@@ -55,8 +61,6 @@ namespace XTech
 
         protected void btnRegister_Click(object sender, EventArgs e)
         {
-            RequiredFieldValidator1.Enabled = false;
-            RequiredFieldValidator1.Enabled = false;
             Response.Redirect("Register.aspx");
         }
     }
