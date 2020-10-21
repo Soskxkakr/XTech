@@ -28,7 +28,7 @@
         <img src="img/Slider7.jpg" style="width:100%;">
       </div>
     
-     <<div class="item">
+     <div class="item">
         <img src="img/Slider3.jpg" style="width:100%;">
       </div>
     </div> 
