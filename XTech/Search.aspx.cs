@@ -23,19 +23,16 @@ namespace XTech
 
         protected void btnSearch_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Debug.WriteLine("HELLLLLLOOOOOOO 1");
             con.Open();
             string query = "SELECT count(*) FROM Users WHERE username='" + txtName.Text + "'";
             SqlCommand cmd = new SqlCommand(query, con);
             int check = Convert.ToInt32(cmd.ExecuteScalar().ToString());
             if (check <= 0)
             {
-                System.Diagnostics.Debug.WriteLine("HELLLLLLOOOOOOO 2");
                 Response.Write("<script type=\"text/javascript\">alert('Record not available.');</script>");
             }
             else
             {
-                System.Diagnostics.Debug.WriteLine("HELLLLLLOOOOOOO 3");
                 SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM Users WHERE username='" + txtName.Text + "'", con);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
@@ -61,6 +58,8 @@ namespace XTech
 
             SqlCommand cmd = new SqlCommand(query, con);
             cmd.ExecuteNonQuery();
+            lblMessage.ForeColor = System.Drawing.Color.ForestGreen;
+            lblMessage.Text = "Successfully Editted!";
             con.Close();
         }
 
@@ -70,6 +69,8 @@ namespace XTech
             string query = "DELETE FROM Users WHERE id ='" + id + "'";
             SqlCommand cmd = new SqlCommand(query, con);
             cmd.ExecuteNonQuery();
+            lblMessage.ForeColor = System.Drawing.Color.ForestGreen;
+            lblMessage.Text = "Successfully Deleted!";
             con.Close();
         }
     }

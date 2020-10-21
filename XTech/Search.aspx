@@ -64,8 +64,9 @@
             </tr>
         </table>
     </asp:Panel>
-    <br />
-    <p class ="text-center">
+    
+    <p class ="text-center p-4">
+        <asp:Label ID="lblMessage" runat="server" Text="" CssClass="h4 m-2"/> <br /> <br />
         <asp:HyperLink ID="HomeHL6" NavigateUrl="~/Home.aspx" CssClass="primary-btn" runat="server">Home</asp:HyperLink>
     </p>
 </asp:Content>
