@@ -26,7 +26,7 @@ namespace XTech
             string htmlStr = "";
             SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["Connectionstring"].ConnectionString);
             con.Open();
-            string query = "SELECT * FROM Products WHERE name LIKE'%" + txtProdName.Text + "%'";
+            string query = "SELECT * FROM Products WHERE category LIKE'%" + txtProdName.Text + "%'";
             SqlCommand cmd = new SqlCommand(query, con);
             SqlDataReader reader = cmd.ExecuteReader();
 

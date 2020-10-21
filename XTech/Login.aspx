@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Layout.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="XTech.Login" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <h2 class="text-center">LOGIN</h2>
+    <h2 class="text-center mb-2">LOGIN</h2>
     <table class="col-lg-6 table table-bordered table-striped mx-auto w-auto">
         <tr>
             <td style="width: 226px; margin-left: 80px">Username:</td>
@@ -20,11 +20,11 @@
                 <asp:Label ID="lblMessage" runat="server"></asp:Label>
             </td>
             <td>
-                <asp:Button ID="btnLogin" runat="server" OnClick="btnLogin_Click" Text="Login" />    
+                <asp:Button ID="btnLogin" runat="server" OnClick="btnLogin_Click" Text="Login" CssClass="border-info" />    
             </td>
         </tr>
     </table>
-    <div class="text-center">
+    <div class="text-center mb-4">
         <a href="SignUp.aspx" class="primary-btn">Register</a>
         <a href="ForgotPassword.aspx" class="primary-btn">Forgot Password?</a>
     </div>

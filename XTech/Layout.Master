@@ -124,7 +124,7 @@
                     </div>
                     <div class="col-lg-1">
                         <div class="header__cart">
-                            <ul>
+                            <ul class="mt-1">
                                 <li><a href="ShopCart.aspx"><i class="fa fa-shopping-bag"></i><asp:Label runat="server" ID="lblCartQty"></asp:Label></a></li>
                             </ul>
                         </div>

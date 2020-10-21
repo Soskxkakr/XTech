@@ -25,6 +25,7 @@
                             <asp:ListItem>Laptop</asp:ListItem>
                             <asp:ListItem>Mouse</asp:ListItem>
                             <asp:ListItem>Keyboard</asp:ListItem>
+                            <asp:ListItem>Phone</asp:ListItem>
                         </asp:DropDownList>
                     </td>
                 </tr>

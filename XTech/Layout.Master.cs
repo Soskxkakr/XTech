@@ -18,10 +18,12 @@ namespace XTech
             {
                 myCart = (Cart) Session["currentCart"];
                 lblCartQty.Text = myCart.size().ToString();
+                Label2.Text = myCart.size().ToString();
             }
             else
             {
                 lblCartQty.Text = "0";
+                Label2.Text = "0";
             }
         }
         protected void Logout_Click(object sender, EventArgs e)
