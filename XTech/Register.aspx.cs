@@ -60,7 +60,8 @@ namespace XTech
                     }
                     else
                     {
-                        string query1 = "INSERT INTO Users (username, password, email, gender, country, usertype) values (@uname,@pword,@email,@gender, @country, @usertype) ";
+                        string query1 = "INSERT INTO Users (username, password, email, gender, country, usertype) " +
+                            "values (@uname,@pword,@email,@gender, @country, @usertype) ";
                         SqlCommand cmd1 = new SqlCommand(query1, con);
                         cmd1.Parameters.AddWithValue("@uname", txtUsername.Text);
                         cmd1.Parameters.AddWithValue("@pword", txtPassword.Text);

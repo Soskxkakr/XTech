@@ -32,7 +32,8 @@ namespace XTech
             SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
             con.Open();
             // Preparing the command for SQL
-            SqlCommand cmd = new SqlCommand("SELECT count(*) FROM Users WHERE username='" + txtUsername.Text + "' AND password = '" + txtPassword.Text + "'", con);
+            SqlCommand cmd = new SqlCommand("SELECT count(*) FROM Users WHERE username='" + 
+                txtUsername.Text + "' AND password = '" + txtPassword.Text + "'", con);
             // Give the command to SQL and check whether the command is valid or not
             int count = Convert.ToInt32(cmd.ExecuteScalar().ToString());
 

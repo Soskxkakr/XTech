@@ -33,7 +33,10 @@ namespace XTech
         protected void btnEdit_Click1(object sender, EventArgs e)
         {
             con.Open();
-            string query = "UPDATE Users SET username ='" + txtUsername.Text + "email ='" + txtEmail.Text + "',gender='" + rdbGender.SelectedItem + "',country ='" + ddlcountry.SelectedItem + "' where id = '" + id + "'";
+            string query = "UPDATE Users SET username ='" + txtUsername.Text + 
+                "email ='" + txtEmail.Text + "'," +
+                "gender='" + rdbGender.SelectedItem + "'," +
+                "country ='" + ddlcountry.SelectedItem + "' WHERE id = '" + id + "'";
 
             SqlCommand cmd = new SqlCommand(query, con);
             cmd.ExecuteNonQuery();
