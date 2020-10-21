@@ -50,7 +50,9 @@
                     </td>
                 </tr>
             </table>
-        </form>
-        
+        </form>       
     </div>
+    <p class="text-center">
+        <asp:HyperLink ID="HLAddprod" runat="server" NavigateUrl="~/AddProduct.aspx" CssClass="primary-btn">Add Another Product</asp:HyperLink>
+    </p>          
 </asp:Content>
